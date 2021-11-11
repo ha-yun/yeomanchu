@@ -1,6 +1,7 @@
 import csv
 
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.views import LoginView
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -16,10 +17,10 @@ from accountapp.models import YMTI
 
 
 
-class YdateLogin(LoginView):
-
-    def get_success_url(self):
-        return reverse('accountapp:detail',kwargs={'pk':self.request.user.pk})
+# class YdateLogin(LoginView):
+#
+#     def get_success_url(self):
+#         return reverse('accountapp:detail',kwargs={'pk':self.request.user.pk})
 
 # def YdateLogin(request):
 #     form = YdateLoginform(request.POST or None)
@@ -35,6 +36,22 @@ class YdateLogin(LoginView):
 #             error = " Sorry! Username and Password didn't match, Please try again ! "
 #     return render(request, 'login.html', {'form': form})
 #
+
+def YdateLogin(request):
+    if request.method != 'POST':
+        form = AuthenticationForm()
+    else:
+        form = AuthenticationForm(request=request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return HttpResponseRedirect(reverse('accountapp:detail',kwargs={'pk':user.id}))
+            else:
+                print('user not found')
+    return render(request, 'login.html', {'form':form})
 
 
 class AccountCreateView(CreateView):
