@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    {% if user == target_user %}
+    <div class="y_login mw-500 m-auto">
+        <div>
+            <h2>
+                나의 보석은~
+            </h2>
+            <p>
+                {{ target_user.jewelry }}
+            </p>
+            <span>
+                <a href="{% url 'articleapp:recommend' pk=target_user.pk%}">
+                    나와 맞는 보석 만나러가기
+                </a>
+            </span>
+    {% else%}
+    {% endif %}
+        </div>
+    </div>
+
+{% endif %}
+    {% include 'footer.html' %}
+{% endblock %}

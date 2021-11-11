@@ -1,0 +1,154 @@
+.y_base{
+    background-color: lavenderblush;
+}
+.y_logo{
+    text-align: center;
+    font-family: 'Sunflower', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: blueviolet;
+}
+
+.y_list{
+    /*text-align: center;*/
+    width: 100%;
+    height: 624px;
+    background-image: url("main.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.article_image{
+    text-align: center;
+    position: absolute;
+    float: left;
+    display: block;
+    background: rgba(6,13,30,0.65);
+    width: 50%;
+    height: 624px;
+    line-height: 550px;
+    color: ghostwhite;
+}
+
+.article_image:hover{
+    background: rgba(2,6,13,0.40);
+    color : palegoldenrod;
+}
+
+.article_image2{
+    position: absolute;
+    float: right;
+    right: 0px;
+    display: block;
+    background: rgba(6,13,30,0.65);
+    width: 50%;
+    height: 624px;
+    line-height: 550px;
+    color: ghostwhite;
+    text-align: center;
+}
+
+.article_image2:hover{
+    background: rgba(2,6,13,0.40);
+    color : palegoldenrod;
+}
+
+
+.mw-500{
+    max-width: 500px;
+    padding: 1rem 1.5rem;
+}
+
+.y_mti{
+    background-color: lavender;
+    border-radius: 4rem;
+}
+
+
+.btn {
+    position:relative;
+    left:40%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+    width:80%;
+    height:40px;
+    background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
+    background-position: left;
+    background-size: 200%;
+    color:white;
+    font-weight: bold;
+    border:none;
+    cursor:pointer;
+    transition: 0.4s;
+    display:inline;
+}
+
+.btn:hover {
+    background-position: right;
+}
+/* login */
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family:sans-serif;
+
+}
+.loginForm {
+    position:absolute;
+    width:300px;
+    height:400px;
+    padding: 30px 20px;
+    background-color:#FFFFFF;
+    text-align:center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+}
+
+.loginForm h2{
+    text-align: center;
+    margin: 30px;
+}
+
+.idForm{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 10px 10px;
+}
+
+.passForm{
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+    padding: 10px 10px;
+}
+
+.id {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+}
+
+.pw {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: #636e72;
+    font-size:16px;
+    height:25px;
+    background: none;
+}
+
+.y_recommend{
+    text-align: center;
+}

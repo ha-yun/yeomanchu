@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    {% if user == target_ytwo %}
+    <div class="y_recommend mw-500 m-auto">
+        <div>
+            <h2>
+                회원
+            </h2>
+            <p>
+                {{ target_ytwo.jewelry }}
+                <br>
+                {{ target_ytwo.username }}
+            </p>
+            <p>
+                데이트코스 : 도서관
+            </p>
+            <span>
+                <a id="btnTwitter" href="javascript:shareTwitter();">
+                    <img src="/static/twitter_img.png" width=36 alt="Twitter">
+                </a>
+                <a id="btnFacebook" href="javascript:shareFacebook();">
+                    <img src="/static/facebook_img.png" width=36 alt="Facebook">
+                </a>
+                <a id="btnKakao" href="javascript:shareKakao();">
+                    <img src="/static/kakao_img.jpg" width=36 alt="Kakaotalk">
+                </a>
+            </span>
+
+                <script>
+                function shareTwitter() {
+                    var sendText = "여만추"; // 전달할 텍스트
+                    var sendUrl = "http://127.0.0.1:1021/articles/list/"; // 전달할 URL
+                    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
+                        }
+                function shareFacebook() {
+                    var sendUrl = "http://127.0.0.1:1021/articles/list/"; // 전달할 URL
+                    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+                        }
+                function shareKakao() {
+                  // 사용할 앱의 JavaScript 키 설정
+                  Kakao.init('6119304fc2852939a02d1c268ece820f');
+                  // 카카오링크 버튼 생성
+                  Kakao.Link.createDefaultButton({
+                    container: '#btnKakao', // 카카오공유버튼ID
+                    objectType: 'feed',
+                    content: {
+                      title: "여만추", // 보여질 제목
+                      description: "추천 데이트 코스입니다", // 보여질 설명
+                      imageUrl: "http://127.0.0.1:1021/articles/list/", // 콘텐츠 URL
+                      link: {
+                         webUrl: "http://127.0.0.1:1021/articles/list/"
+                      }
+                    }
+                  });
+                    }
+                </script>
+    {% else%}
+    {% endif %}
+        </div>
+    </div>
+
+{% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+
+<div class="y_list">
+    {% if user.is_authenticated %}
+        <img src="../../static/main.jpg" class="article_image">
+
+    {% else %}
+
+    <a href="{% url 'accountapp:login' %}" class="m-5">
+    <h2 class="article_image">MEMBER</h2>
+    </a>
+
+    <a href="{% url 'accountapp:blogin' %}" class="m-5 b-5">
+    <h2 class="article_image2">YMTI</h2>
+    </a>
+
+    {% endif %}
+</div>
+
+
+</body>
+{% endblock %}

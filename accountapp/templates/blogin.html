@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="y_login mw-500 m-auto">
+        <div>
+            <h4 class="m-5">운명의 짝을 찾고 계신가요?</h4>
+        </div>
+        <div>
+            <h4 class="mw-500">
+                <a href="https://m.yeoboya.com/ymti/ymtiShareMain" target="_blank" class="y_mti">
+                    YMTI 검사하기
+                </a>
+            </h4>
+            <p>
+                나와 어울리는 보석과 데이트 코스 추천받으러 가기 >><<
+            </p>
+                <a href="{% url 'accountapp:create' %}" class="mw-500">
+                    <img src="https://cdn.pixabay.com/photo/2021/10/15/11/06/lemon-background-6712130_960_720.png" class="blogin_login">
+                </a>
+
+        </div>
+
+    </div>
+
+{% endblock %} 

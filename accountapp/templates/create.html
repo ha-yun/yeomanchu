@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+
+    <div class="y_login m-auto mw-500">
+        <div>
+            <h4 class="m-5"> 회원 가입 </h4>
+        </div>
+        <div>
+
+            <form action="{% url 'accountapp:create' %}" method="post">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                    <p> 본인의 보석을 입력해주세요! </p>
+                    <input type="submit" class="btn btn-dark rounded-pill px-5">
+                <div class="m-5">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}
