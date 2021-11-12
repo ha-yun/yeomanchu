@@ -6,7 +6,7 @@ from accountapp.views import blogin, AccountDetailView, AccountCreateView, Ydate
 app_name = 'accountapp'
 
 urlpatterns = [
-    path('login/', YdateLogin, name='login'),
+    path('login/', YdateLogin.as_view(template_name='login.html'), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('create/', AccountCreateView.as_view(), name='create'),
     path('detail/<int:pk>', AccountDetailView.as_view(), name='detail'),

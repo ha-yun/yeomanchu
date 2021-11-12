@@ -5,17 +5,16 @@
 
     <form action="" method="post" class="loginForm">{% csrf_token %}
         <h2 class="m-5">Login</h2>
-        {{ form.as_p }}
-{#        {% for field in form %}#}
-{#        <div class="idForm">#}
-{#            <label form="{{ field.id_for_label }}">{{ field.label }}</label>#}
-{#            <input type="{{ field.field.widget.input_type }}" class="id"#}
-{#                   id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}"/>#}
-{#        </div>#}
-{#        {% if field.errors %}#}
-{#            <span style="color: red">필수 항목입니다</span>#}
-{#        {% endif %}#}
-{#        {% endfor %}#}
+        {% for field in form %}
+        <div class="idForm">
+            <label form="{{ field.id_for_label }}">{{ field.label }}</label>
+            <input type="{{ field.field.widget.input_type }}" class="id"
+                   id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}"/>
+        </div>
+        {% if field.errors %}
+            <span style="color: red">필수 항목입니다</span>
+        {% endif %}
+        {% endfor %}
         <button type="submit" class="btn rounded-pill" onclick="button()">Log in</button>
 
     </form>
