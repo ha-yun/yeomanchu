@@ -30,3 +30,4 @@ class YTHREE(DetailView):
     model = YMTI
     context_object_name = 'target_ythree'
     template_name = 'ythree.html'
+

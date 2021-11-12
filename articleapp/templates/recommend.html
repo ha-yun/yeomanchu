@@ -8,19 +8,19 @@
     {% if user.is_authenticated %}
         {% if user == target %}
         <p>
-            1. A
+            1. 회원 : {{ target.username }}
             <a href="{% url 'articleapp:yone' pk=target.pk%}">
                 데이트코스 보러가기
             </a>
         </p>
         <p>
-            2. B
+            2. 회원 : {{ target.username }}
             <a href="{% url 'articleapp:ytwo' pk=target.pk%}">
                 데이트코스 보러가기
             </a>
         </p>
         <p>
-            3. C
+            3. 회원 : {{ target.username }}
             <a href="{% url 'articleapp:ythree' pk=target.pk%}">
                 데이트코스 보러가기
             </a>

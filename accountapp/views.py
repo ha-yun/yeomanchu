@@ -40,7 +40,7 @@ class AccountDetailView(DetailView):
     template_name = 'detail.html'
 
 
-## ydate_user 데이터 추가
+## ymti회원 데이터를 YMTI 모델에 추가
 # with open('static/ymti_edit_data00.csv',newline='') as csvfile:
 #     data_reader = csv.DictReader(csvfile)
 #     for row in data_reader:
@@ -57,5 +57,3 @@ class AccountDetailView(DetailView):
 #         food_cat =row['food_cat'],
 #         concn =row['concn'],
 #         )
-
-

@@ -9,8 +9,3 @@ class YMTISIGN(UserCreationForm):
     model = YMTI
     fields = ['username','password']
 
-# class YdateLoginform(AuthenticationForm):
-#   class Meta:
-#     model = YMTI
-#     fields = ['username','password']
-
