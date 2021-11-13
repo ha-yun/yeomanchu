@@ -47,6 +47,7 @@ class AccountDetailView(DetailView):
 #         YMTI.objects.create(
 #         username=row['mem_id'],
 #         password= make_password(row['mem_no']),
+#         mem_no = row['mem_no'],
 #         mem_sex = row['mem_sex'],
 #         mem_age = row['mem_age'],
 #         mem_loc = row['mem_loc'],
@@ -57,3 +58,5 @@ class AccountDetailView(DetailView):
 #         food_cat =row['food_cat'],
 #         concn =row['concn'],
 #         )
+# 비밀번호 암호화 관련 참고링크! -> make_password()
+# https://docs.djangoproject.com/en/3.2/topics/auth/passwords/#django.contrib.auth.hashers.PBKDF2PasswordHasher

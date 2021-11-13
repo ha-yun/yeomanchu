@@ -8,7 +8,8 @@
     {% if user.is_authenticated %}
         {% if user == target %}
         <p>
-            1. 회원 : {{ target.username }}
+
+            1. 회원 : {{ view.food}}
             <a href="{% url 'articleapp:yone' pk=target.pk%}">
                 데이트코스 보러가기
             </a>
