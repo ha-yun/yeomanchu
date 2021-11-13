@@ -17,11 +17,26 @@ class RECOMMEND(DetailView):
     context_object_name = 'target'
     template_name = 'recommend.html'
 
+    # 첫 번째 추천(음식)
     def food(self):
-        # mem_id = YMTI.objects.order_by('mem_id')
-        mem_id = 1379275
+        user = self.request.user
+        mem_id = user.mem_no    # mem_id = 1379275
         food = find_food_person(mem_id, 1)['mbti_code']
         return food
+    # 두 번째 추천(로그기반)
+    def log(self):
+        user = self.request.user
+        mem_id = user.mem_no
+        log = find_log(mem_id,1)['mbti_code']
+        return log
+    # 세 번째 추천(YMTI)
+    def ymti_recommend(self):
+        user = self.request.user
+        mem_id = user.mem_no
+        df_ymti = find_ymti(mem_id,30)
+        df_ymti = df_ymti.sort_values(by='concn', axis=0,ascending=False)
+        ymti_recommend = df_ymti[:1]['mbti_code']
+        return ymti_recommend
 
 class YONE(DetailView):
     model = YMTI

@@ -7,6 +7,7 @@ from django.db import models
 # Create your models here.
 
 class YMTI(AbstractUser):
+    mem_no = models.IntegerField(null=True)
     mem_sex = models.TextField(null=True)
     mem_age = models.IntegerField(null=True)
     mem_loc = models.TextField(null=True)

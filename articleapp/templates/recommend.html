@@ -15,13 +15,13 @@
             </a>
         </p>
         <p>
-            2. 회원 : {{ target.username }}
+            2. 회원 : {{ view.log }}
             <a href="{% url 'articleapp:ytwo' pk=target.pk%}">
                 데이트코스 보러가기
             </a>
         </p>
         <p>
-            3. 회원 : {{ target.username }}
+            3. 회원 : {{ view.ymti_recommend }}
             <a href="{% url 'articleapp:ythree' pk=target.pk%}">
                 데이트코스 보러가기
             </a>
