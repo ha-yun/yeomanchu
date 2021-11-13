@@ -9,24 +9,130 @@
         {% if user == target %}
         <p>
 
-            1. 회원 : {{ view.food}}
+            1. 회원 :
+            {% for food in view.food %}
+                {% if food == 'ENFP' %}
+                    낙천적인 토파즈
+                {% elif food == 'ENFJ' %}
+                    배려감 넘치는 크리스탈
+                {% elif food == 'ENTJ' %}
+                    사랑을 쟁취하는 에메랄드
+                {% elif food == 'ENTP' %}
+                    생각이 톡톡 튀는 페리도트
+                {% elif food == 'ESFJ' %}
+                    포용하는 사파이어
+                {% elif food == 'ESFP' %}
+                    기쁨을 주는 쿤자이트
+                {% elif food == 'ESTJ' %}
+                    책임감의 대명사 터키석
+                {% elif food == 'ESTP' %}
+                    자신감 넘치는 루벨라이트
+                {% elif food == 'INFJ' %}
+                    신뢰 가득한 가넷
+                {% elif food == 'INFP' %}
+                    낭만적인 루비
+                {% elif food == 'INTJ' %}
+                    능력있는 진주
+                {% elif food == 'INTP' %}
+                    품격있는 다이아몬드
+                {% elif food == 'ISFJ' %}
+                    이해심 넘치는 투어멀린
+                {% elif food == 'ISFP' %}
+                    정이 많은 라피스라줄리
+                {% elif food == 'ISTJ' %}
+                    조용히 강렬한 자수정
+                {% endif %}
+            {% endfor %}
+            <br>
+
             <a href="{% url 'articleapp:yone' pk=target.pk%}">
                 데이트코스 보러가기
             </a>
         </p>
         <p>
-            2. 회원 : {{ view.log }}
+            2. 회원 :
+            {% for log in view.log %}
+                {% if log == 'ENFP' %}
+                    낙천적인 토파즈
+                {% elif log == 'ENFJ' %}
+                    배려감 넘치는 크리스탈
+                {% elif log == 'ENTJ' %}
+                    사랑을 쟁취하는 에메랄드
+                {% elif log == 'ENTP' %}
+                    생각이 톡톡 튀는 페리도트
+                {% elif log == 'ESFJ' %}
+                    포용하는 사파이어
+                {% elif log == 'ESFP' %}
+                    기쁨을 주는 쿤자이트
+                {% elif log == 'ESTJ' %}
+                    책임감의 대명사 터키석
+                {% elif log == 'ESTP' %}
+                    자신감 넘치는 루벨라이트
+                {% elif log == 'INFJ' %}
+                    신뢰 가득한 가넷
+                {% elif log == 'INFP' %}
+                    낭만적인 루비
+                {% elif log == 'INTJ' %}
+                    능력있는 진주
+                {% elif log == 'INTP' %}
+                    품격있는 다이아몬드
+                {% elif log == 'ISFJ' %}
+                    이해심 넘치는 투어멀린
+                {% elif log == 'ISFP' %}
+                    정이 많은 라피스라줄리
+                {% elif log == 'ISTJ' %}
+                    조용히 강렬한 자수정
+                {% endif %}
+            {% endfor %}
+            <br>
+
             <a href="{% url 'articleapp:ytwo' pk=target.pk%}">
                 데이트코스 보러가기
             </a>
         </p>
         <p>
-            3. 회원 : {{ view.ymti_recommend }}
+            3. 회원 :
+            {% for ymti in view.ymti_recommend %}
+                {% if ymti == 'ENFP' %}
+                    낙천적인 토파즈
+                {% elif ymti == 'ENFJ' %}
+                    배려감 넘치는 크리스탈
+                {% elif ymti == 'ENTJ' %}
+                    사랑을 쟁취하는 에메랄드
+                {% elif ymti == 'ENTP' %}
+                    생각이 톡톡 튀는 페리도트
+                {% elif ymti == 'ESFJ' %}
+                    포용하는 사파이어
+                {% elif ymti == 'ESFP' %}
+                    기쁨을 주는 쿤자이트
+                {% elif ymti == 'ESTJ' %}
+                    책임감의 대명사 터키석
+                {% elif ymti == 'ESTP' %}
+                    자신감 넘치는 루벨라이트
+                {% elif ymti == 'INFJ' %}
+                    신뢰 가득한 가넷
+                {% elif ymti == 'INFP' %}
+                    낭만적인 루비
+                {% elif ymti == 'INTJ' %}
+                    능력있는 진주
+                {% elif ymti == 'INTP' %}
+                    품격있는 다이아몬드
+                {% elif ymti == 'ISFJ' %}
+                    이해심 넘치는 투어멀린
+                {% elif ymti == 'ISFP' %}
+                    정이 많은 라피스라줄리
+                {% elif ymti == 'ISTJ' %}
+                    조용히 강렬한 자수정
+                {% endif %}
+            {% endfor %}
+            <br>
+
             <a href="{% url 'articleapp:ythree' pk=target.pk%}">
                 데이트코스 보러가기
             </a>
         </p>
-            {% else %}
+
+        {% else %}
             ?
         {% endif %}
     {% endif %}
