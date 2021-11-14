@@ -5,19 +5,17 @@
     <div class="y_recommend mw-500 m-auto">
         <div>
             <p>
-                {{ target_yone.mbti_code }}
-                <br>
-                {{ target_yone.username }}
+                {{ view.yone_place_date }}
+                <span>
+                    <a href="{{ view.yone_place_date_link }}" target="_blank">link</a>
+                </span>
             </p>
+
             <p>
-                {% for yone_place in view.yone_place_date %}
-                    {{ yone_place }}
-                {% endfor %}
-            </p>
-            <p>
-                {% for yone_food in view.yone_food_date %}
-                    {{ yone_food }}
-                {% endfor %}
+                {{ view.yone_food_date }}
+                <span>
+                    <a href="{{ view.yone_food_date_link }}" target="_blank">link</a>
+                </span>
             </p>
 
             <span>

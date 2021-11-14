@@ -7,20 +7,19 @@
         <div>
 
             <p>
-                {{ target_ytwo.jewelry }}
-                <br>
-                {{ target_ytwo.username }}
+                {{ view.ytwo_place_date }}
+                <span>
+                    <a href="{{ view.ytwo_place_date_link }}" target="_blank">link</a>
+                </span>
             </p>
+
             <p>
-                {% for ytwo_place in view.ytwo_place_date %}
-                    {{ ytwo_place }}
-                {% endfor %}
+                {{ view.ytwo_food_date }}
+                <span>
+                    <a href="{{ view.ytwo_food_date_link }}" target="_blank">link</a>
+                </span>
             </p>
-            <p>
-                {% for ytwo_food in view.ytwo_food_date %}
-                    {{ ytwo_food }}
-                {% endfor %}
-            </p>
+
             <span>
                 <a id="btnTwitter" href="javascript:shareTwitter();">
                     <img src="/static/share_img/twitter_img.png" width=36 alt="Twitter">
