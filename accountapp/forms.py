@@ -7,5 +7,5 @@ from django.contrib.auth.forms import AuthenticationForm
 class YMTISIGN(UserCreationForm):
   class Meta:
     model = YMTI
-    fields = ['username','password']
+    fields = ['username', 'password1', 'password2']
 
