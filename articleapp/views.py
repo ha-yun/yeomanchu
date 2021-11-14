@@ -7,9 +7,9 @@ from django.views.generic import DetailView
 from accountapp.models import YMTI
 
 ## 회원 추천을 위한 Recommendation_System파일 호출
-from static.Recommendation_System import *
+from static.Recommendation_System2 import *
 ## 데이트코스 추천을 위한 dating_course.py파일 호출
-from static.dating_course import *
+from static.dating_course2 import *
 
 
 
@@ -25,7 +25,7 @@ class RECOMMEND(DetailView):
     # 첫 번째 추천(음식)
     def food(self):
         user = self.request.user
-        mem_id = user.mem_no    # mem_id = 1379275
+        mem_id = user.mem_no
         food = find_food_person(mem_id, 1)['mbti_code']
         return food
     # 두 번째 추천(로그기반)
