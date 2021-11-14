@@ -12,17 +12,24 @@
                 {{ target_ytwo.username }}
             </p>
             <p>
-                데이트코스 : 도서관
+                {% for ytwo_place in view.ytwo_place_date %}
+                    {{ ytwo_place }}
+                {% endfor %}
+            </p>
+            <p>
+                {% for ytwo_food in view.ytwo_food_date %}
+                    {{ ytwo_food }}
+                {% endfor %}
             </p>
             <span>
                 <a id="btnTwitter" href="javascript:shareTwitter();">
-                    <img src="/static/twitter_img.png" width=36 alt="Twitter">
+                    <img src="/static/share_img/twitter_img.png" width=36 alt="Twitter">
                 </a>
                 <a id="btnFacebook" href="javascript:shareFacebook();">
-                    <img src="/static/facebook_img.png" width=36 alt="Facebook">
+                    <img src="/static/share_img/facebook_img.png" width=36 alt="Facebook">
                 </a>
                 <a id="btnKakao" href="javascript:shareKakao();">
-                    <img src="/static/kakao_img.jpg" width=36 alt="Kakaotalk">
+                    <img src="/static/share_img/kakao_img.jpg" width=36 alt="Kakaotalk">
                 </a>
             </span>
 

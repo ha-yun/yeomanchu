@@ -12,17 +12,24 @@
                 {{ target_ythree.username }}
             </p>
             <p>
-                데이트코스 : ><
+                {% for ythree_place in view.ythree_place_date %}
+                    {{ ythree_place }}
+                {% endfor %}
+            </p>
+            <p>
+                {% for ythree_food in view.ythree_food_date %}
+                    {{ ythree_food }}
+                {% endfor %}
             </p>
             <span>
                 <a id="btnTwitter" href="javascript:shareTwitter();">
-                    <img src="/static/twitter_img.png" width=36 alt="Twitter">
+                    <img src="/static/share_img/twitter_img.png" width=36 alt="Twitter">
                 </a>
                 <a id="btnFacebook" href="javascript:shareFacebook();">
-                    <img src="/static/facebook_img.png" width=36 alt="Facebook">
+                    <img src="/static/share_img/facebook_img.png" width=36 alt="Facebook">
                 </a>
                 <a id="btnKakao" href="javascript:shareKakao();">
-                    <img src="/static/kakao_img.jpg" width=36 alt="Kakaotalk">
+                    <img src="/static/share_img/kakao_img.jpg" width=36 alt="Kakaotalk">
                 </a>
             </span>
 
