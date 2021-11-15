@@ -4,50 +4,58 @@
     {% include 'star.html' %}
 {% if user.is_authenticated %}
     {% if user == target_user %}
-    <div class="loginForm">
+    <div class="detailForm">
         <div>
             <h2>
-                나의 보석은~
+                나의 보석
             </h2>
                 {#  본인 보석 알려주기!   #}
             <p>
                 {% if target_user.mbti_code == 'ENFP' %}
-                    낙천적인 토파즈
+                    <h4>낙천적인 토파즈</h4>
+                    <img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">
                 {% elif target_user.mbti_code == 'ENFJ' %}
                     배려감 넘치는 크리스탈
                 {% elif target_user.mbti_code == 'ENTJ' %}
                     사랑을 쟁취하는 에메랄드
                 {% elif target_user.mbti_code == 'ENTP' %}
                     생각이 톡톡 튀는 페리도트
+                    <img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">
                 {% elif target_user.mbti_code == 'ESFJ' %}
                     포용하는 사파이어
+                    <img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">
                 {% elif target_user.mbti_code == 'ESFP' %}
                     기쁨을 주는 쿤자이트
                 {% elif target_user.mbti_code == 'ESTJ' %}
                     책임감의 대명사 터키석
+                    <img src="../../static/ymti_jewerly/터키석.png" class="jewerly">
                 {% elif target_user.mbti_code == 'ESTP' %}
                     자신감 넘치는 루벨라이트
                 {% elif target_user.mbti_code == 'INFJ' %}
-                    신뢰 가득한 가넷
+                    <h4>신뢰 가득한 가넷</h4>
+                    <img src="../../static/ymti_jewerly/가넷.png" class="jewerly">
                 {% elif target_user.mbti_code == 'INFP' %}
                     낭만적인 루비
                 {% elif target_user.mbti_code == 'INTJ' %}
                     능력있는 진주
+                    <img src="../../static/ymti_jewerly/진주.png" class="jewerly">
                 {% elif target_user.mbti_code == 'INTP' %}
                     품격있는 다이아몬드
                 {% elif target_user.mbti_code == 'ISFJ' %}
                     이해심 넘치는 투어멀린
                 {% elif target_user.mbti_code == 'ISFP' %}
                     정이 많은 라피스라줄리
+                    <img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">
                 {% elif target_user.mbti_code == 'ISTJ' %}
                     조용히 강렬한 자수정
                 {% elif food == 'ISTP' %}
                     상대를 존중하는 아쿠아마린
+                    <img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">
                 {% endif %}
             </p>
             <span>
                 <a href="{% url 'articleapp:recommend' pk=target_user.pk%}">
-                    나와 맞는 보석 만나러가기
+                    짝꿍 보석 만나러가기
                 </a>
             </span>
     {% else%}
