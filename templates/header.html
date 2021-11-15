@@ -1,9 +1,11 @@
 
-<div class="y_logo">
+<div class="text-center">
     <div style="margin: 2rem 0">
         {% if user.is_authenticated %}
          <h1>
+            <a href="{% url 'articleapp:list' %}">
                 여만추
+            </a>
         </h1>
         <span class="mw-500">
             당신을 위한

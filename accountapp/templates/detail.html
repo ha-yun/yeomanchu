@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% include 'star.html' %}
 {% if user.is_authenticated %}
     {% if user == target_user %}
-    <div class="y_login mw-500 m-auto">
+    <div class="loginForm">
         <div>
             <h2>
                 나의 보석은~
