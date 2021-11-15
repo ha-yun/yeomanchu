@@ -6,9 +6,7 @@
 <div class="y_recommend">
     {% if user.is_authenticated %}
         {% if user == target %}
-        <p>
-
-            1. 회원 :
+        <div>
             {% for food in view.food %}
                 {% if food == 'ENFP' %}
                     <h4> 낙천적인 토파즈 </h4>
@@ -61,13 +59,8 @@
                 {% endif %}
             {% endfor %}
             <br>
+            <a href="{% url 'articleapp:yone' pk=target.pk%}">데이트코스 보러가기</a>
 
-            <a href="{% url 'articleapp:yone' pk=target.pk%}">
-                데이트코스 보러가기
-            </a>
-        </p>
-        <p>
-            2. 회원 :
             {% for log in view.log %}
                 {% if log == 'ENFP' %}
                     <h4> 낙천적인 토파즈 </h4>
@@ -120,13 +113,8 @@
                 {% endif %}
             {% endfor %}
             <br>
+            <a href="{% url 'articleapp:ytwo' pk=target.pk%}">데이트코스 보러가기</a>
 
-            <a href="{% url 'articleapp:ytwo' pk=target.pk%}">
-                데이트코스 보러가기
-            </a>
-        </p>
-        <p>
-            3. 회원 :
             {% for ymti in view.ymti_recommend %}
                 {% if ymti == 'ENFP' %}
                     <h4> 낙천적인 토파즈 </h4>
@@ -180,10 +168,8 @@
             {% endfor %}
             <br>
 
-            <a href="{% url 'articleapp:ythree' pk=target.pk%}">
-                데이트코스 보러가기
-            </a>
-        </p>
+            <a href="{% url 'articleapp:ythree' pk=target.pk%}">데이트코스 보러가기</a>
+        </div>
 
         {% else %}
             ?
