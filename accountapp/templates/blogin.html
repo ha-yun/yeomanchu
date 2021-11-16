@@ -1,24 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
-<body class="blogin">
-    <div class="mw-500 m-auto text-center">
-    {% include 'star.html' %}
-            <div>
-            <h4>
-                <a href="https://m.yeoboya.com/ymti/ymtiShareMain" target="_blank" class="y_mti">
-                    내 보석 알아보러 가기
+
+ {% include 'star.html' %}
+        <div class="blogin">
+                 <a href="https://m.yeoboya.com/ymti/ymtiShareMain" target="_blank" class="ios-15">
+                    <div class="wrapper">
+                        <span>YMTI 검사하기</span>
+                        <div class="circle circle-12"></div>
+                        <div class="circle circle-11"></div>
+                        <div class="circle circle-10"></div>
+                        <div class="circle circle-9"></div>
+                        <div class="circle circle-8"></div>
+                        <div class="circle circle-7"></div>
+                        <div class="circle circle-6"></div>
+                        <div class="circle circle-5"></div>
+                        <div class="circle circle-4"></div>
+                        <div class="circle circle-3"></div>
+                        <div class="circle circle-2"></div>
+                        <div class="circle circle-1"></div>
+                    </div>
                 </a>
-            </h4>
-            </div>
-            <div class="text-center">
-                <a href="{% url 'accountapp:create' %}" class="mw-500">
+            <div>
+                <a href="{% url 'accountapp:create' %}">
                    <div class="card">
-                    운명의 짝을 찾고 계신가요?
+                    회원가입하고 짝꿍보석 만나러가기
                     </div>
                 </a>
             </div>
-
-    </div>
+        </div>
 {% include 'footer.html' %}
-</body>
+
 {% endblock %} 
