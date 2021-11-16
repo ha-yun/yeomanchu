@@ -4,11 +4,11 @@
 
 {% block content %}
 
-    <body width="100%" height="100%">
+    <body>
         <div>
             {% include 'star.html' %}
             <form action="{% url 'accountapp:create' %}" method="post" class="createForm">{% csrf_token %}
-                <h2 class="m-5">회원 가입</h2>
+                <h2>회원 가입</h2>
                 {% for field in form %}
             <div class="idForm">
                 <label form="{{ field.id_for_label }}">{{ field.label }}</label>
@@ -20,8 +20,6 @@
                         {% endif %}
                     {% endfor %}
                     <button type="submit" class="btn rounded-pill" onclick="button()">Create</button>
-                <div class="m-5">
-                </div>
             </form>
 
         </div>

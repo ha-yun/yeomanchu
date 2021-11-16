@@ -1,8 +1,11 @@
+h1{
+    font-size: 55px;
+}
 a{
     text-decoration: none;
     color: ghostwhite;
-}
 
+}
 a:hover{
     color: paleturquoise;
 }
@@ -51,7 +54,6 @@ a:hover{
     color : palegoldenrod;
 }
 
-
 .mw-500{
     max-width: 500px;
     padding: 1rem 1.5rem;
@@ -60,7 +62,7 @@ a:hover{
     position:relative;
     left:40%;
     transform: translateX(-50%);
-    margin-bottom: 40px;
+    margin: 20px;
     width:80%;
     height:40px;
     background: linear-gradient(125deg,#81ecec,#6c5ce7,#81ecec);
@@ -73,7 +75,6 @@ a:hover{
     transition: 0.4s;
     display:inline;
 }
-
 .btn:hover {
     background-position: right;
 }
@@ -83,16 +84,15 @@ a:hover{
     padding: 0px;
     text-decoration: none;
     font-family: 'Cafe24Oneprettynight';
-
 }
 .loginForm {
     position:absolute;
     width:300px;
-    height:450px;
-    padding: 30px 20px;
+    height:400px;
+    padding: 10px 20px;
     background-color:#FFFFFF;
     text-align:center;
-    top:50%;
+    top:55%;
     left:50%;
     transform: translate(-50%,-50%);
     border-radius: 15px;
@@ -105,17 +105,16 @@ a:hover{
     padding: 30px 20px;
     background-color:#FFFFFF;
     text-align:center;
-    top:65%;
+    top:55%;
     left:50%;
     transform: translate(-50%,-50%);
     border-radius: 15px;
     color: black;
 }
-
 .createForm{
    position:absolute;
     width:350px;
-    height:550px;
+    height:500px;
     padding: 30px 20px;
     background-color:#FFFFFF;
     text-align:center;
@@ -127,7 +126,7 @@ a:hover{
 }
 .loginForm h2{
     text-align: center;
-    margin: 30px;
+    margin: 20px;
 }
 
 .idForm{
@@ -173,79 +172,38 @@ a:hover{
   padding-bottom: 2rem;
   box-sizing: border-box;
   text-align: center;
+  margin-top: 60px;
+}
+.blogin_ymti{
+    font-size: 40px;
+    color:rgba(41,35,79,0.88);
+}
+.blogin_ymti:hover{
+    color: rgba(248, 248, 255, 0.8);
+    transition: color 1s;
 }
 .card {
-    width: 250px;
-    height: 30px;
+    width: 400px;
+    height: 50px;
     border-radius: 28px;
-    background-color: slategrey;
+    background-color: rgba(41, 35, 79, 0.6);
+    margin: 30px;
+    margin-bottom: 90px;
+    padding:8px;
+    font-size:25px;
+    color: rgba(248, 248, 255, 0.8);
+    text-align: center;
+    box-shadow: 0 2px 25px rgba(137, 99, 226, 0.5);
+    transition: transform ease-in 0.1s
 }
-/*.card {*/
-/*  background: #191c29;*/
-/*  width: var(--card-width);*/
-/*  height: var(--card-height);*/
-/*  padding: 3px;*/
-/*  margin: 30px;*/
-/*  position: relative;*/
-/*  border-radius: 6px;*/
-/*  justify-content: center;*/
-/*  align-items: center;*/
-/*  text-align: center;*/
-/*  display: flex;*/
-/*  font-size: 1.5em;*/
-/*  color: rgb(88 199 250 / 0%);*/
-/*  cursor: pointer;*/
-/*}*/
-/*.card:hover {*/
-/*  color: rgb(88 199 250 / 100%);*/
-/*  transition: color 1s;*/
-/*}*/
-/*.card:hover:before, .card:hover:after {*/
-/*  animation: none;*/
-/*  opacity: 0;*/
-/*}*/
-/*.card::before {*/
-/*  content: "";*/
-/*  width: 102%;*/
-/*  height: 103%;*/
-/*  border-radius: 8px;*/
-/*  background-image: linear-gradient(*/
-/*    var(--rotate)*/
-/*    , #5ddcff, #3c67e3 43%, #4e00c2);*/
-/*    position: absolute;*/
-/*    z-index: -1;*/
-/*    !*top: -1%;*!*/
-/*    !*left: -2%;*!*/
-/*    animation: spin 2.5s linear infinite;*/
-/*}*/
-/*.card::after {*/
-/*  position: absolute;*/
-/*  content: "";*/
-/*  top: calc(var(--card-height) / 6);*/
-/*  left: 0;*/
-/*  right: 0;*/
-/*  z-index: -1;*/
-/*  height: 100%;*/
-/*  width: 100%;*/
-/*  margin: 0 auto;*/
-/*  transform: scale(0.8);*/
-/*  filter: blur(calc(var(--card-height) / 6));*/
-/*  background-image: linear-gradient(*/
-/*    var(--rotate)*/
-/*    , #5ddcff, #3c67e3 43%, #4e00c2);*/
-/*    opacity: 1;*/
-/*  transition: opacity .5s;*/
-/*  animation: spin 2.5s linear infinite;*/
-/*}*/
-/*@keyframes spin {*/
-/*  0% {*/
-/*    --rotate: 0deg;*/
-/*  }*/
-/*  100% {*/
-/*    --rotate: 360deg;*/
-/*  }*/
-/*}*/
-
+.card:focus{
+    outline: 0;
+}
+.card:hover {
+    color: rgba(229, 201, 21, 0.84);
+    transition: color 1s;
+    transform: scale(0.9);
+}
     /*ios15*/
 .ios-15 {
   --duration: 7s;
@@ -296,9 +254,9 @@ a:hover{
   overflow: hidden;
   border-radius: 50%;
   min-width: 132px;
-  padding: 12px 0;
-  width: 300px;
-  height: 300px;
+  padding: 30px 0;
+  width: 250px;
+  height: 250px;
   text-align: center;
   line-height: 200px;
 }
@@ -637,80 +595,31 @@ a:hover{
             transform: translate(60px, -32px) translateZ(0);
   }
 }
-/*html {*/
-/*  box-sizing: border-box;*/
-/*  -webkit-font-smoothing: antialiased;*/
-/*}*/
-
-/** {*/
-/*  box-sizing: inherit;*/
-/*}*/
-/**:before, *:after {*/
-/*  box-sizing: inherit;*/
-/*}*/
 
 
-/*body .dribbble {*/
-/*  position: fixed;*/
-/*  display: block;*/
-/*  right: 20px;*/
-/*  bottom: 20px;*/
-/*}*/
-/*body .dribbble img {*/
-/*  display: block;*/
-/*  width: 76px;*/
-/*}*/
-/*=================star2======================*/
+/*=================body======================*/
 html,
 body {
   padding: 0px;
   margin: 0px;
   width: 100%;
-  height: 110%;
-  position: absolute;
+  height: 100%;
+max-width: 100%;
+max-height: 100%;
+min-width: 100%;
+min-height: 100%;
+  position: center;
   color: ghostwhite;
   padding-top: 0.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
   background: linear-gradient(#29234f, slategrey);
 }
-
 body {
   /*display: flex;*/
+  /*  flex-direction:column ;*/
   justify-content: center;
   align-items: center;
   filter: contrast(120%);
-}
-
-.container {
-  /*width: 100%;*/
-  /*height: 100%;*/
-  background-image: radial-gradient(1600px at 70% 120%, rgba(73, 84, 165, 0.6) 10%, rgba(182, 202, 238, 0.72) 100%);
-    position:relative;
-}
-
-.content {
-  /*width: inherit;*/
-  /*height: inherit;*/
-    position:relative;
-}
-
-#universe {
-  width: 100%;
-  height: 100%;
-}
-
-#footer {
-  /*position: absolute;*/
-  bottom: 0px;
-  height: 300px;
-  width: 100%;
-}
-
-#scene {
-  height: 100%;
-  /*position: absolute;*/
-  left: 50%;
-  margin-left: -800px;
 }
 
 /*-------------LOVE-----------------*/
@@ -730,7 +639,7 @@ body {
 .logo b{
   font: 400 19vh "Vibur";
   color: #fee;
-  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #445dff, 0 0 0.5em #6044ff, 0 0 0.1em #445dff, 0 10px 3px #000;
 }
 .logo b span{
   animation: blink linear infinite 2s;

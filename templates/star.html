@@ -2,7 +2,6 @@
 <body>
 </body>
         <style>
-
             @-webkit-keyframes STAR {
               0% {
                 background: powderblue;
@@ -73,11 +72,11 @@
             var windowHeight = window.innerHeight;
 
             var x = Math.random( ) * windowWidth;
-            aStar.style.left = x + 'px';
+            aStar.style.left = 0.98*x + 'px';
             document.body.appendChild( aStar );
 
             var y = Math.random( ) * windowHeight;
-            aStar.style.top = y + 'px';
+            aStar.style.top = 0.98*y + 'px';
 
             addPulse( aStar );
 
