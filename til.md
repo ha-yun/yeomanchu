@@ -38,7 +38,7 @@
 - share link (facebook, twitter, kakao)
 
 [211104]
-- share link image (facebook, twitter, kakao)
+- share link image 추가 (facebook, twitter, kakao)
 
 [211105]
 - class loginview(LoginView): def get_success_url
@@ -67,13 +67,13 @@
              concn =row['concn'],
              )
         ```
-- YdataLogin 수정즁, db에 넣은 회원 데이터로 로그인이 안됨!
+- [ERROR] : YdataLogin 수정즁, db에 넣은 회원 데이터로 로그인이 안됨!
 
 [211111]
-- AuthenticationForm, authenticate() 적용 x
+- [ERROR] : AuthenticationForm, authenticate() 적용 x
 
 [211112]
-- yuser데이터를 db에 넣을 때 해시화해서 넣기
+- [해결!] : yuser데이터를 db에 넣을 때 해시화해서 넣기
   - password= make_password(row['mem_no'])
   - 비밀번호 암호화 관련 참고링크 : https://docs.djangoproject.com/en/3.2/topics/auth/passwords/#django.contrib.auth.hashers.PBKDF2PasswordHasher
 - accountapp/templates/detail.html 
@@ -92,6 +92,7 @@
 [211115]
 - star.html 파일 추가(별똥별 효과)
   - html,json,css
+  - [ERROR] : 별똥별 효과 시 화면프레임 움직임..
 - Cafe24Oneprettynight font 추가
 - detail.html 보석 이미지 추가
 - blogin.html에 card button 추가
@@ -101,6 +102,7 @@
   - @method_decorator(yuser, name='dispatch')
 - blogin.html에 ios-15 구슬 효과 추가
 - home page 수정
+  - [해결!] : 별똥별 효과 화면프레임 움직임 해결(json파일에 aStar.style.left = 0.98*x + 'px';)
 
 [211117]
 

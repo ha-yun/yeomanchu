@@ -98,17 +98,17 @@ a:hover{
     color: black;
 }
 .detailForm{
-    position:absolute;
-    width:700px;
-    height:500px;
-    padding: 30px 20px;
-    background-color:#FFFFFF;
+    position:relative;
+    width:400px;
+    height:410px;
+    padding: 10px 20px;
+    background-color: rgba(248, 248, 255, 0.22);
     text-align:center;
-    top:65%;
+    top:33%;
     left:50%;
     transform: translate(-50%,-50%);
-    border-radius: 15px;
-    color: black;
+    border-radius: 100px;
+    color: #000000;
 }
 .createForm{
    position:absolute;
@@ -145,12 +145,49 @@ a:hover{
     background: none;
 }
 
-.y_recommend{
-    text-align: center;
+/*--recommend---*/
+.food_recommend{
     color: #ffeeee;
+    padding:10px;
+    margin-left: 13%;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(248, 248, 255, 0.22);
+    border-radius: 20px;
+}
+.log_recommend{
+    color: #ffeeee;
+    padding:30px;
+    margin-left: 43%;
+    text-align: center;
+    position: absolute;
+}
+.ymti_recommend{
+    color: #ffeeee;
+    padding:30px;
+    margin-left: 63%;
+    text-align: center;
+    position: absolute;
 }
 
-
+.place_date{
+    color: #ffeeee;
+    padding:10px;
+    margin-left: 20%;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(248, 248, 255, 0.22);
+    border-radius: 20px;
+}
+.food_date{
+    color: #ffeeee;
+    padding:10px;
+    margin-left: 60%;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(248, 248, 255, 0.22);
+    border-radius: 20px;
+}
 
 /*-------blogin------card------ios15-----------*/
 @property --rotate {
@@ -364,7 +401,8 @@ a:hover{
     -webkit-transform: translate(12px, 64px) translateZ(0);
             transform: translate(12px, 64px) translateZ(0);
   }
-}@keyframes circle-1 {
+}
+@keyframes circle-1 {
   33% {
     -webkit-transform: translate(0px, 16px) translateZ(0);
             transform: translate(0px, 16px) translateZ(0);
@@ -681,13 +719,21 @@ body {
 }
 
 /*----------jewerly----------*/
-.jewerly {
-     width: 150px;
-     height: 270px;
+.detail_jewerly {
+     max-width: 200px;
+     max-height: 250px;
      text-align: center;
-     margin: 30px;
+     margin: 10px;
      animation: up-down 1.4s infinite ease-in-out alternate;
      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+}
+.jewerly {
+     max-width: 40px;
+     max-height: 68px;
+    margin-top: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 @keyframes up-down{
   from{
@@ -695,5 +741,49 @@ body {
   }
   to{
     transform: translatey(-20px);
+  }
+}
+.jewerly_ment{
+    text-align: center;
+    margin-left: 8px;
+    margin-right: 10px;
+    font-size: 24px;
+}
+.jewerly_img{
+     max-width: 300px;
+     max-height: 370px;
+    size: auto;
+     text-align: center;
+    padding-top: 20px;
+     margin: 5px;
+     animation: up-down 1.4s infinite ease-in-out alternate;
+     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+/*-heart button-*/
+.heart {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+    margin-top:10px;
+  /*left: 50%;*/
+  /*top: 50%;*/
+  transform: translate(-50%, -50%);
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  animation: fave-heart 1s steps(28);
+    color:black;
+}
+.heart:hover {
+  background-position: -2800px 0;
+  transition: background 1s steps(28);
+}
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
   }
 }

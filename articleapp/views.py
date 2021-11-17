@@ -35,16 +35,29 @@ class RECOMMEND(DetailView):
     def food(self):
         food = find_food_person(mem_id, 1)['mbti_code']
         return food
+    def food_sex(self):
+        food_sex = find_food_person(mem_id, 1)['mem_sex']
+        return food_sex
+
     # 두 번째 추천(로그기반)
     def log(self):
         log = find_log(mem_id,1)['mbti_code']
         return log
+    def log_sex(self):
+        log_sex = find_log(mem_id,1)['mem_sex']
+        return log_sex
+
     # 세 번째 추천(YMTI)
     def ymti_recommend(self):
         df_ymti = find_ymti(mem_id,30)
         df_ymti = df_ymti.sort_values(by='concn', axis=0,ascending=False)
         ymti_recommend = df_ymti[:1]['mbti_code']
         return ymti_recommend
+    def ymti_recommend_sex(self):
+        df_ymti = find_ymti(mem_id,30)
+        df_ymti = df_ymti.sort_values(by='concn', axis=0,ascending=False)
+        ymti_recommend_sex = df_ymti[:1]['mem_sex']
+        return ymti_recommend_sex
 
 
 

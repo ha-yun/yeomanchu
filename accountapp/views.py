@@ -41,7 +41,7 @@ class AccountDetailView(DetailView):
 
 
 ## ymti회원 데이터를 YMTI 모델에 추가
-# with open('static/ymti_edit_data00.csv',newline='') as csvfile:
+# with open('static/data/profile_ymti_data_ver2/ymti_userdata.csv',newline='') as csvfile:
 #     data_reader = csv.DictReader(csvfile)
 #     for row in data_reader:
 #         YMTI.objects.create(

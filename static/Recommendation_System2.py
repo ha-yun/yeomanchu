@@ -12,7 +12,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static/data/profile_ymti_data_ver2')
 path2 = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static/data/log_data_1027_2')
 df = pd.read_csv(path+'\ymti_data.csv',engine='c',encoding='UTF-8')                                     # 원데이터
-df_2030 = pd.read_csv(path + '\ymti_edit_data.csv',engine='c',encoding='UTF-8')                         # 20,30대 YMTI 데이터
+df_2030 = pd.read_csv(path+'\ymti_edit_data.csv', engine='c', encoding='UTF-8')                         # 20,30대 YMTI 데이터
 
 want_df = pd.read_csv(path2 + '\want_log.csv',engine='c',encoding='UTF-8')                              # 만나고 싶어요 로그
 concn_df = pd.read_csv(path2 + '\concn_log.csv',engine='c',encoding='UTF-8')                            # 관심있어요 로그
