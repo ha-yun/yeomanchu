@@ -6,13 +6,11 @@
 
         <div class="place_date">
             <h5 style="font-weight: bold;"> ♡ 함께하기 딱 좋은 이색 데이트 ♡ </h5>
-            <p>
-                <h6>{{ view.yone_place_date }}</h6>
+                <img src="../../static/데이트코스/실내2.png" class="place_dateimg"><h6>{{ view.yone_place_date }}</h6>
                 <span>
                     <a href="{{ view.yone_place_date_link }}" target="_blank">link</a>
                 </span>
-            </p>
-            <span>
+            <p>
                     <a id="btnTwitter" href="javascript:shareTwitter();">
                         <img src="/static/share_img/twitter_img.png" width=36 alt="Twitter">
                     </a>
@@ -22,18 +20,16 @@
                     <a id="btnKakao" href="javascript:shareKakao();">
                         <img src="/static/share_img/kakao_img.jpg" width=36 alt="Kakaotalk">
                     </a>
-                </span>
+                </p>
         </div>
         <div class="food_date">
             <h5 style="font-weight: bold;"> ♡ 취향 맞춤 식당 ♡ </h5>
-            <p>
                 {{ view.yone_food_date }}
                 <span>
                     <a href="{{ view.yone_food_date_link }}" target="_blank">link</a>
                 </span>
-            </p>
 
-            <span>
+            <p>
                 <a id="btnTwitter" href="javascript:shareTwitter();">
                     <img src="/static/share_img/twitter_img.png" width=36 alt="Twitter">
                 </a>
@@ -43,7 +39,7 @@
                 <a id="btnKakao" href="javascript:shareKakao();">
                     <img src="/static/share_img/kakao_img.jpg" width=36 alt="Kakaotalk">
                 </a>
-            </span>
+            </p>
 
                 <script>
                 function shareTwitter() {
