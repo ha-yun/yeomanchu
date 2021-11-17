@@ -4,10 +4,9 @@ h1{
 a{
     text-decoration: none;
     color: ghostwhite;
-
 }
 a:hover{
-    color: paleturquoise;
+    color: #6c5ce7;
 }
 
 .y_list{
@@ -33,7 +32,7 @@ a:hover{
 
 .article_image:hover{
     background: rgba(2,6,13,0.40);
-    color : palegoldenrod;
+    transition: background 1s;
 }
 
 .article_image2{
@@ -51,7 +50,7 @@ a:hover{
 
 .article_image2:hover{
     background: rgba(2,6,13,0.40);
-    color : palegoldenrod;
+    transition: background 1s;
 }
 
 .mw-500{
@@ -101,11 +100,11 @@ a:hover{
 .detailForm{
     position:absolute;
     width:700px;
-    height:600px;
+    height:500px;
     padding: 30px 20px;
     background-color:#FFFFFF;
     text-align:center;
-    top:55%;
+    top:65%;
     left:50%;
     transform: translate(-50%,-50%);
     border-radius: 15px;
