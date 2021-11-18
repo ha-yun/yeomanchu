@@ -3,9 +3,7 @@
 {% block content %}
 
 <body>
-
         {% if user.is_authenticated %}
-
         {% include 'star.html' %}
         <div class="logo"><b>L<span>o</span><span>v</span>e</b></div>
 
@@ -13,10 +11,10 @@
 
     <div class="y_list">
     <a href="{% url 'accountapp:login' %}" class="m-5">
-    <h2 class="article_image">MEMBER</h2>
+    <h1 class="article_image">MEMBER</h1>
     </a>
     <a href="{% url 'accountapp:blogin' %}" class="m-5 b-5">
-    <h2 class="article_image2">YMTI</h2>
+    <h1 class="article_image2">YMTI</h1>
     </a>
     </div>
 

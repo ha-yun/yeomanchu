@@ -40,13 +40,13 @@ df_etc = pd.DataFrame(columns=['etc','url'],data=etc)                       # �
 ## 1. 첫 번째 사람에 대한 장소,음식점 추천(음식 기반 사람 추천)========================================================================================
 def first_dating_course(mem_id,top_n):
     if (find_food_person(mem_id,top_n).mem_sex.values=="f") & (find_food_person(mem_id,top_n).mbti_code.values[0][0]=="E"):
-        return df_outside['outside'][0], df_outside['url'][0]
+        return 'outside' ,df_outside['outside'][0], df_outside['url'][0]
     elif (find_food_person(mem_id,top_n).mem_sex.values=="f") & (find_food_person(mem_id,top_n).mbti_code.values[0][0]=="I"):
-        return df_inside['inside'][0],df_inside['url'][0]
+        return 'outside' ,df_inside['inside'][0],df_inside['url'][0]
     elif (df_2030[df_2030['mem_no']==mem_id].mem_sex.values=="f") & (df_2030[df_2030['mem_no']==mem_id].mbti_code.values[0][0]=="E"):
-        return df_outside['outside'][0],df_outside['url'][0]
+        return 'outside' ,df_outside['outside'][0],df_outside['url'][0]
     elif (df_2030[df_2030['mem_no']==mem_id].mem_sex.values=="f") & (df_2030[df_2030['mem_no']==mem_id].mbti_code.values[0][0]=="I"):
-        return df_inside['inside'][0],df_inside['url'][0]
+        return 'outside' ,df_inside['inside'][0],df_inside['url'][0]
 #'western', 'chinese', 'japanese', 'korean','dessert', 'etc'
 def first_food_course(mem_id,top_n):
     if find_food_person(mem_id,top_n).food_cat.values[0].split()[0] =="western":
@@ -128,7 +128,7 @@ def third_food_course(mem_id,top_n):
 #
 # print("=="*62)
 # print(" ★ 첫 번째 사람의 데이트 코스 추천 ★ ")
-# print("데이트 장소 : ",first_dating_course(mem_id,1))
+print("데이트 장소 : ",first_dating_course(mem_id,1))
 # print("음식점 : ", first_food_course(mem_id,1))
 # print("=="*62)
 # print(" ★ 두 번째 사람의 데이트 코스 추천 ★ ")

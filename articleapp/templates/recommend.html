@@ -42,7 +42,7 @@
                             <img src="../../static/연예인/조승우.jpg" class="jewerly_img"><h2>조승우</h2>
                         {% elif food == 'INTJ' %}
                             <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
-                            <img src="../../static/연예인/강동원.png" class="jewerly_img"><h2>강동원</h2>
+                            <img src="../../static/연예인/강동원.jpg" class="jewerly_img"><h2>강동원</h2>
                         {% elif food == 'INTP' %}
                             <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
                             <img src="../../static/연예인/슈가.jpg" class="jewerly_img"><h2>슈가</h2>
@@ -112,7 +112,7 @@
                     {% endif %}
                 {% endfor %}
                 {% endfor %}
-                <hr style="border:solid;"> <a style="font-size: 22px;" href="{% url 'articleapp:yone' pk=target.pk%}">데이트코스 보러가기</a>
+                <hr style="border:solid;"> <a style="font-size: 24px;" href="{% url 'articleapp:yone' pk=target.pk%}">데이트코스 보러가기</a>
         </div>
         <div class="log_recommend">
             {% for sex in target.mem_sex %}
@@ -150,7 +150,7 @@
                             <img src="../../static/연예인/조승우.jpg" class="jewerly_img"><h2>조승우</h2>
                         {% elif log == 'INTJ' %}
                             <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
-                            <img src="../../static/연예인/강동원.png" class="jewerly_img"><h2>강동원</h2>
+                            <img src="../../static/연예인/강동원.jpg" class="jewerly_img"><h2>강동원</h2>
                         {% elif log == 'INTP' %}
                             <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
                             <img src="../../static/연예인/슈가.jpg" class="jewerly_img"><h2>슈가</h2>
@@ -220,7 +220,7 @@
                     {% endif %}
                 {% endfor %}
                 {% endfor %}
-                <hr style="border:solid;"> <a style="font-size: 22px;" href="{% url 'articleapp:ytwo' pk=target.pk%}">데이트코스 보러가기</a>
+                <hr style="border:solid;"> <a style="font-size: 24px;" href="{% url 'articleapp:ytwo' pk=target.pk%}">데이트코스 보러가기</a>
         </div>
         <div class="ymti_recommend">
             {% for sex in target.mem_sex %}
@@ -258,7 +258,7 @@
                             <img src="../../static/연예인/조승우.jpg" class="jewerly_img"><h2>조승우</h2>
                         {% elif ymti == 'INTJ' %}
                             <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
-                            <img src="../../static/연예인/강동원.png" class="jewerly_img"><h2>강동원</h2>
+                            <img src="../../static/연예인/강동원.jpg" class="jewerly_img"><h2>강동원</h2>
                         {% elif ymti == 'INTP' %}
                             <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
                             <img src="../../static/연예인/슈가.jpg" class="jewerly_img"><h2>슈가</h2>
@@ -328,7 +328,7 @@
                     {% endif %}
                 {% endfor %}
                 {% endfor %}
-            <hr style="border:solid;"> <a style="font-size: 22px;" href="{% url 'articleapp:ythree' pk=target.pk%}">데이트코스 보러가기</a>
+            <hr style="border:solid;"> <a style="font-size: 24px;" href="{% url 'articleapp:ythree' pk=target.pk%}">데이트코스 보러가기</a>
         </div>
 
         {% else %}
