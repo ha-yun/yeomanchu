@@ -147,27 +147,41 @@ a:hover{
 
 /*--recommend---*/
 .food_recommend{
-    color: #ffeeee;
-    padding:10px;
-    margin-left: 13%;
+    color: #0e1821;
+    font-weight: bold;
+    padding:13px;
+    margin-left: 11%;
+    margin-top:1%;
     text-align: center;
     position: absolute;
     background-color: rgba(248, 248, 255, 0.22);
     border-radius: 20px;
+    width:350px;
+    height:500px;
 }
 .log_recommend{
     color: #ffeeee;
-    padding:30px;
-    margin-left: 43%;
+    padding:13px;
+    margin-left: 39%;
+    margin-top:1%;
     text-align: center;
     position: absolute;
+    background-color: rgba(248, 248, 255, 0.22);
+    border-radius: 20px;
+    width:350px;
+    height:500px;
 }
 .ymti_recommend{
     color: #ffeeee;
-    padding:30px;
-    margin-left: 63%;
+    padding:13px;
+    margin-left: 67%;
+    margin-top:1%;
     text-align: center;
     position: absolute;
+    background-color: rgba(248, 248, 255, 0.22);
+    border-radius: 20px;
+    width:350px;
+    height:500px;
 }
 
 .place_date{
@@ -734,8 +748,7 @@ body {
 
 }
 .jewerly {
-     max-width: 40px;
-     max-height: 68px;
+     max-height: 50px;
     margin-top: 3px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -755,8 +768,9 @@ body {
     font-size: 24px;
 }
 .jewerly_img{
+    width: auto; height: auto;
      max-width: 300px;
-     max-height: 370px;
+     max-height: 300px;
     size: auto;
      text-align: center;
     padding-top: 20px;

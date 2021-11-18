@@ -105,4 +105,21 @@
   - [해결!] : 별똥별 효과 화면프레임 움직임 해결(json파일에 aStar.style.left = 0.98*x + 'px';)
 
 [211117]
+- templates수정
+  - detail, recommend, yone
+  - html,css
 
+[211118]
+- [ERROR]decorator 오류
+  ```python
+    # decorator
+    def yuser(func):
+        def wrap(request,*args,**kwargs):
+            user = request.user
+            mem_id = user.mem_no
+            return func(request,*args,**kwargs)
+        return wrap
+  ```
+  - mem_id = user.mem_no 오류남!
+- [ERROR] Recommend : 남자만 추천됨
+  - [해결완료] : 로그인된 회원성별을 조건으로 지정해야함!

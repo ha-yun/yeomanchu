@@ -3,373 +3,332 @@
 {% block content %}
 <body>
 {% include 'cutyfire.html' %}
+
     {% if user.is_authenticated %}
         {% if user == target %}
         <div class="food_recommend">
-                {% for sex in view.food_sex %}
+            {% for sex in target.mem_sex %}
+                {% for food in view.food %}
                     {% if sex == 'f' %}
-                        {% for food in view.food %}
+                        {% if food == 'ENFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">낙천적인 토파즈</span><br>
+                            <img src="../../static/연예인/유연석.jpg" class="jewerly_img"><h2>유연석</h2>
+                        {% elif food == 'ENFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">배려감 넘치는 크리스탈</span><br>
+                            <img src="../../static/연예인/지민.jpg" class="jewerly_img"><h2>지민</h2>
+                        {% elif food == 'ENTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">사랑을 쟁취하는 에메랄드</span><br>
+                            <img src="../../static/연예인/곽동연.jpg" class="jewerly_img"><h2>곽동연</h2>
+                        {% elif food == 'ENTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">생각이 톡톡 튀는 페리도트</span><br>
+                            <img src="../../static/연예인/정혁.jpg" class="jewerly_img"><h2>정혁</h2>
+                        {% elif food == 'ESFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">포용하는 사파이어</span><br>
+                            <img src="../../static/연예인/박보검.jpg" class="jewerly_img"><h2> 박보검</h2>
+                        {% elif food == 'ESFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">기쁨을 주는 쿤자이트</span><br>
+                            <img src="../../static/연예인/정재현.jpg" class="jewerly_img"><h2>정재현</h2>
+                        {% elif food == 'ESTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/터키석.png" class="jewerly">책임감의 대명사 터키석</span><br>
+                            <img src="../../static/연예인/김민규.jpg" class="jewerly_img"><h2>김민규</h2>
+                        {% elif food == 'ESTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">자신감 넘치는 루벨라이트</span><br>
+                            <img src="../../static/연예인/태현.jpg" class="jewerly_img"><h2>태현</h2>
+                        {% elif food == 'INFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/가넷.png" class="jewerly">신뢰 가득한 가넷</span><br>
+                            <img src="../../static/연예인/남주혁.jpg" class="jewerly_img"><h2>남주혁</h2>
+                        {% elif food == 'INFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루비.png" class="jewerly">낭만적인 루비</span><br>
+                            <img src="../../static/연예인/조승우.jpg" class="jewerly_img"><h2>조승우</h2>
+                        {% elif food == 'INTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
+                            <img src="../../static/연예인/강동원.png" class="jewerly_img"><h2>강동원</h2>
+                        {% elif food == 'INTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
+                            <img src="../../static/연예인/슈가.jpg" class="jewerly_img"><h2>슈가</h2>
+                        {% elif food == 'ISFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">이해심 넘치는 투어멀린</span><br>
+                            <img src="../../static/연예인/정한.jpg" class="jewerly_img"><h2>정한</h2>
+                        {% elif food == 'ISFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">정이 많은 라피스라줄리</span><br>
+                            <img src="../../static/연예인/유재석.jpg" class="jewerly_img"><h2>유재석</h2>
+                        {% elif food == 'ISTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/자수정.png" class="jewerly">조용히 강렬한 자수정</span><br>
+                            <img src="../../static/연예인/차태현.jpg" class="jewerly_img"><h2>차태현</h2>
+                        {% elif food == 'ISTP' %}
+                             <span class="jewerly_ment"><img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">상대를 존중하는 아쿠아마린</span><br>
+                            <img src="../../static/연예인/주우재.jpg" class="jewerly_img"><h2>주우재</h2>
+                        {% endif %}
+                    {% elif sex == 'm' %}
                             {% if food == 'ENFP' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">낙천적인 토파즈</span><br>
-                                <img src="../../static/연예인/유연석.jpg" class="jewerly_img"><h2>유연석</h2>
+                                <img src="../../static/연예인/조보아.png" class="jewerly_img"><h2>조보아</h2>
                             {% elif food == 'ENFJ' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">배려감 넘치는 크리스탈</span><br>
-                                <img src="../../static/연예인/지민.jpg" class="jewerly_img"><h2>지민</h2>
+                                <img src="../../static/연예인/예린.jpg" class="jewerly_img"><h2>예린</h2>
                             {% elif food == 'ENTJ' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">사랑을 쟁취하는 에메랄드</span><br>
-                                <img src="../../static/연예인/.jpg" class="jewerly_img"><h2>곽동연</h2>
+                                <img src="../../static/연예인/티파니.jpg" class="jewerly_img"><h2>티파니</h2>
                             {% elif food == 'ENTP' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">생각이 톡톡 튀는 페리도트</span><br>
-                                <img src="../../static/연예인/정혁.jpg" class="jewerly_img"><h2>정혁</h2>
+                                <img src="../../static/연예인/한예슬.jpg" class="jewerly_img"><h2>한예슬</h2>
                             {% elif food == 'ESFJ' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">포용하는 사파이어</span><br>
-                                <img src="../../static/연예인/.jpg" class="jewerly_img"><h2> 박보검</h2>
+                                <img src="../../static/연예인/효정.jpg" class="jewerly_img"><h2>효정</h2>
                             {% elif food == 'ESFP' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">기쁨을 주는 쿤자이트</span><br>
-                                <img src="../../static/연예인/정재현.jpg" class="jewerly_img"><h2>정재현</h2>
+                                <img src="../../static/연예인/윤아.jpg" class="jewerly_img"><h2>윤아</h2>
                             {% elif food == 'ESTJ' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/터키석.png" class="jewerly">책임감의 대명사 터키석</span><br>
-                                <img src="../../static/연예인/.jpg" class="jewerly_img"><h2>김민규</h2>
+                                <img src="../../static/연예인/한채영.jpg" class="jewerly_img"><h2>한채영</h2>
                             {% elif food == 'ESTP' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">자신감 넘치는 루벨라이트</span><br>
-                                <img src="../../static/연예인/태현.jpg" class="jewerly_img"><h2>태현</h2>
+                                <img src="../../static/연예인/이유비.jpg" class="jewerly_img"><h2>이유비</h2>
                             {% elif food == 'INFJ' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/가넷.png" class="jewerly">신뢰 가득한 가넷</span><br>
-                                <img src="../../static/연예인/.jpg" class="jewerly_img"><h2>남주혁</h2>
+                                <img src="../../static/연예인/태연.jpg" class="jewerly_img"><h2>태연</h2>
                             {% elif food == 'INFP' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루비.png" class="jewerly">낭만적인 루비</span><br>
-                                <img src="../../static/연예인/조승우.jpg" class="jewerly_img"><h2>조승우</h2>
+                                <img src="../../static/연예인/아이유.jpg" class="jewerly_img"><h2>아이유</h2>
                             {% elif food == 'INTJ' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
-                                <img src="../../static/연예인/강동원.png" class="jewerly_img"><h2>강동원</h2>
+                                <img src="../../static/연예인/류진.jpg" class="jewerly_img"><h2>류진</h2>
                             {% elif food == 'INTP' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
-                                <img src="../../static/연예인/슈가.jpg" class="jewerly_img"><h2>슈가</h2>
+                                <img src="../../static/연예인/정은지.jpg" class="jewerly_img"><h2>정은지</h2>
                             {% elif food == 'ISFJ' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">이해심 넘치는 투어멀린</span><br>
-                                <img src="../../static/연예인/" class="jewerly_img"><h2>정한</h2>
+                                <img src="../../static/연예인/예지.jpg" class="jewerly_img"><h2>예지</h2>
                             {% elif food == 'ISFP' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">정이 많은 라피스라줄리</span><br>
-                                <img src="../../static/연예인/" class="jewerly_img"><h2>유재석</h2>
+                                <img src="../../static/연예인/이미주.jpg" class="jewerly_img"><h2>이미주</h2>
                             {% elif food == 'ISTJ' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/자수정.png" class="jewerly">조용히 강렬한 자수정</span><br>
-                                <img src="../../static/연예인/차태현.jpg" class="jewerly_img"><h2>차태현</h2>
-                            {% elif food == 'ISTP' %}
-                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">상대를 존중하는 아쿠아마린</span><br>
-                                <img src="../../static/연예인/주우재.jpg" class="jewerly_img"><h2>주우재</h2>
-                            {% endif %}
-                        {% endfor %}
-                    {% else %}
-                        {% for food in view.food %}
-                            {% if food == 'ENFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">낙천적인 토파즈</span><br>
-                                <h4>조보아</h4>
-                            {% elif food == 'ENFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">배려감 넘치는 크리스탈</span><br>
-                                <h4>예린</h4>
-                            {% elif food == 'ENTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">사랑을 쟁취하는 에메랄드</span><br>
-                                <h4>티파니</h4>
-                            {% elif food == 'ENTP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">생각이 톡톡 튀는 페리도트</span><br>
-                                <h4>한예슬</h4>
-                            {% elif food == 'ESFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">포용하는 사파이어</span><br>
-                                <h4>효정</h4>
-                            {% elif food == 'ESFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">기쁨을 주는 쿤자이트</span><br>
-                                <h4>윤아</h4>
-                            {% elif food == 'ESTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/터키석.png" class="jewerly">책임감의 대명사 터키석</span><br>
-                                <h4>한채영</h4>
-                            {% elif food == 'ESTP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">자신감 넘치는 루벨라이트</span><br>
-                                <h4>이유비</h4>
-                            {% elif food == 'INFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/가넷.png" class="jewerly">신뢰 가득한 가넷</span><br>
-                                <h4>태연</h4>
-                            {% elif food == 'INFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루비.png" class="jewerly">낭만적인 루비</span><br>
-                                <h4>아이유</h4>
-                            {% elif food == 'INTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
-                                <h4>류진</h4>
-                            {% elif food == 'INTP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
-                                <h4>정은지</h4>
-                            {% elif food == 'ISFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">이해심 넘치는 투어멀린</span><br>
-                                <h4>예지</h4>
-                            {% elif food == 'ISFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">정이 많은 라피스라줄리</span><br>
-                                <h4>이미주</h4>
-                            {% elif food == 'ISTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/자수정.png" class="jewerly">조용히 강렬한 자수정</span><br>
-                                <h4>효연</h4>
+                                <img src="../../static/연예인/효연.jpg" class="jewerly_img"><h2>효연</h2>
                             {% elif food == 'ISTP' %}
                                 <span class="jewerly_ment"><img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">상대를 존중하는 아쿠아마린</span><br>
-                                <h4>김연아</h4>
+                                <img src="../../static/연예인/김연아.jpg" class="jewerly_img"><h2>김연아</h2>
                             {% endif %}
-                        {% endfor %}
                     {% endif %}
+                {% endfor %}
                 {% endfor %}
                 <hr style="border:solid;"> <a style="font-size: 22px;" href="{% url 'articleapp:yone' pk=target.pk%}">데이트코스 보러가기</a>
         </div>
         <div class="log_recommend">
-            {% for sex in view.log_sex %}
+            {% for sex in target.mem_sex %}
+                {% for log in view.log %}
                     {% if sex == 'f' %}
-                        {% for log in view.log %}
-                            {% if log == 'ENFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">낙천적인 토파즈</span><br>
-                                <h4>유연석</h4>
-                            {% elif log == 'ENFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">배려감 넘치는 크리스탈</span><br>
-                                <h4>지민</h4>
-                            {% elif log == 'ENTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">사랑을 쟁취하는 에메랄드</span><br>
-                                <h4>곽동연</h4>
-                            {% elif log == 'ENTP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">생각이 톡톡 튀는 페리도트</span><br>
-                                <h4>정혁</h4>
-                            {% elif log == 'ESFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">포용하는 사파이어</span><br>
-                                <h4> 박보검</h4>
-                            {% elif log == 'ESFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">기쁨을 주는 쿤자이트</span><br>
-                                <h4>정재현</h4>
-                            {% elif log == 'ESTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/터키석.png" class="jewerly">책임감의 대명사 터키석</span><br>
-                                <h4>김민규</h4>
-                            {% elif log == 'ESTP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">자신감 넘치는 루벨라이트</span><br>
-                                <h4>태현</h4>
-                            {% elif log == 'INFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/가넷.png" class="jewerly">신뢰 가득한 가넷</span><br>
-                                <h4>남주혁</h4>
-                            {% elif log == 'INFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루비.png" class="jewerly">낭만적인 루비</span><br>
-                                <h4>조승우</h4>
-                            {% elif log == 'INTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
-                                <h4>강동원</h4>
-                            {% elif log == 'INTP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
-                                <h4>슈가</h4>
-                            {% elif log == 'ISFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">이해심 넘치는 투어멀린</span><br>
-                                <h4>정한</h4>
-                            {% elif log == 'ISFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">정이 많은 라피스라줄리</span><br>
-                                <h4>유재석</h4>
-                            {% elif log == 'ISTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/자수정.png" class="jewerly">조용히 강렬한 자수정</span><br>
-                                <h4>차태현</h4>
-                            {% elif log == 'ISTP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">상대를 존중하는 아쿠아마린</span><br>
-                                <h4>주우재</h4>
-                            {% endif %}
-                        {% endfor %}
-                    {% else %}
-                        {% for log in view.log %}
-                            {% if log == 'ENFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">낙천적인 토파즈</span><br>
-                                <h4>조보아</h4>
-                            {% elif log == 'ENFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">배려감 넘치는 크리스탈</span><br>
-                                <h4>예린</h4>
-                            {% elif log == 'ENTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">사랑을 쟁취하는 에메랄드</span><br>
-                                <h4>티파니</h4>
-                            {% elif log == 'ENTP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">생각이 톡톡 튀는 페리도트</span><br>
-                                <h4>한예슬</h4>
-                            {% elif log == 'ESFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">포용하는 사파이어</span><br>
-                                <h4>효정</h4>
-                            {% elif log == 'ESFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">기쁨을 주는 쿤자이트</span><br>
-                                <h4>윤아</h4>
-                            {% elif log == 'ESTJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/터키석.png" class="jewerly">책임감의 대명사 터키석</span><br>
-                                <h4>한채영</h4>
-                            {% elif log == 'ESTP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">자신감 넘치는 루벨라이트</span><br>
-                                <h4>이유비</h4>
-                            {% elif log == 'INFJ' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/가넷.png" class="jewerly">신뢰 가득한 가넷</span><br>
-                                <h4>태연</h4>
-                            {% elif log == 'INFP' %}
-                                <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루비.png" class="jewerly">낭만적인 루비</span><br>
-                                <h4>아이유</h4>
-                            {% elif log == 'INTJ' %}
-                                <h5> 능력있는 진주 </h5>
-                                <img src="../../static/ymti_jewerly/진주.png" class="jewerly">
-                                <h4>류진</h4>
-                            {% elif log == 'INTP' %}
-                                <h5>품격있는 다이아몬드</h5>
-                                <img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">
-                                <h4>정은지</h4>
-                            {% elif log == 'ISFJ' %}
-                                <h5>이해심 넘치는 투어멀린</h5>
-                                <img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">
-                                <h4>예지</h4>
-                            {% elif log == 'ISFP' %}
-                                <h5> 정이 많은 라피스라줄리</h5>
-                                <img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">
-                                <h4>이미주</h4>
-                            {% elif log == 'ISTJ' %}
-                                <h5>조용히 강렬한 자수정</h5>
-                                <img src="../../static/ymti_jewerly/자수정.png" class="jewerly">
-                                <h4>효연</h4>
-                            {% elif log == 'ISTP' %}
-                                <h5> 상대를 존중하는 아쿠아마린</h5>
-                                <img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">
-                                <h4>김연아</h4>
-                            {% endif %}
-                        {% endfor %}
+                        {% if log == 'ENFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">낙천적인 토파즈</span><br>
+                            <img src="../../static/연예인/유연석.jpg" class="jewerly_img"><h2>유연석</h2>
+                        {% elif log == 'ENFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">배려감 넘치는 크리스탈</span><br>
+                            <img src="../../static/연예인/지민.jpg" class="jewerly_img"><h2>지민</h2>
+                        {% elif log == 'ENTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">사랑을 쟁취하는 에메랄드</span><br>
+                            <img src="../../static/연예인/곽동연.jpg" class="jewerly_img"><h2>곽동연</h2>
+                        {% elif log == 'ENTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">생각이 톡톡 튀는 페리도트</span><br>
+                            <img src="../../static/연예인/정혁.jpg" class="jewerly_img"><h2>정혁</h2>
+                        {% elif log == 'ESFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">포용하는 사파이어</span><br>
+                            <img src="../../static/연예인/박보검.jpg" class="jewerly_img"><h2> 박보검</h2>
+                        {% elif log == 'ESFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">기쁨을 주는 쿤자이트</span><br>
+                            <img src="../../static/연예인/정재현.jpg" class="jewerly_img"><h2>정재현</h2>
+                        {% elif log == 'ESTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/터키석.png" class="jewerly">책임감의 대명사 터키석</span><br>
+                            <img src="../../static/연예인/김민규.jpg" class="jewerly_img"><h2>김민규</h2>
+                        {% elif log == 'ESTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">자신감 넘치는 루벨라이트</span><br>
+                            <img src="../../static/연예인/태현.jpg" class="jewerly_img"><h2>태현</h2>
+                        {% elif log == 'INFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/가넷.png" class="jewerly">신뢰 가득한 가넷</span><br>
+                            <img src="../../static/연예인/남주혁.jpg" class="jewerly_img"><h2>남주혁</h2>
+                        {% elif log == 'INFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루비.png" class="jewerly">낭만적인 루비</span><br>
+                            <img src="../../static/연예인/조승우.jpg" class="jewerly_img"><h2>조승우</h2>
+                        {% elif log == 'INTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
+                            <img src="../../static/연예인/강동원.png" class="jewerly_img"><h2>강동원</h2>
+                        {% elif log == 'INTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
+                            <img src="../../static/연예인/슈가.jpg" class="jewerly_img"><h2>슈가</h2>
+                        {% elif log == 'ISFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">이해심 넘치는 투어멀린</span><br>
+                            <img src="../../static/연예인/정한.jpg" class="jewerly_img"><h2>정한</h2>
+                        {% elif log == 'ISFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">정이 많은 라피스라줄리</span><br>
+                            <img src="../../static/연예인/유재석.jpg" class="jewerly_img"><h2>유재석</h2>
+                        {% elif log == 'ISTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/자수정.png" class="jewerly">조용히 강렬한 자수정</span><br>
+                            <img src="../../static/연예인/차태현.jpg" class="jewerly_img"><h2>차태현</h2>
+                        {% elif log == 'ISTP' %}
+                             <span class="jewerly_ment"><img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">상대를 존중하는 아쿠아마린</span><br>
+                            <img src="../../static/연예인/주우재.jpg" class="jewerly_img"><h2>주우재</h2>
+                        {% endif %}
+                    {% elif sex == 'm' %}
+                        {% if log == 'ENFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">낙천적인 토파즈</span><br>
+                            <img src="../../static/연예인/조보아.png" class="jewerly_img"><h2>조보아</h2>
+                        {% elif log == 'ENFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">배려감 넘치는 크리스탈</span><br>
+                            <img src="../../static/연예인/예린.jpg" class="jewerly_img"><h2>예린</h2>
+                        {% elif log == 'ENTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">사랑을 쟁취하는 에메랄드</span><br>
+                            <img src="../../static/연예인/티파니.jpg" class="jewerly_img"><h2>티파니</h2>
+                        {% elif log == 'ENTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">생각이 톡톡 튀는 페리도트</span><br>
+                            <img src="../../static/연예인/한예슬.jpg" class="jewerly_img"><h2>한예슬</h2>
+                        {% elif log == 'ESFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">포용하는 사파이어</span><br>
+                            <img src="../../static/연예인/효정.jpg" class="jewerly_img"><h2>효정</h2>
+                        {% elif log == 'ESFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">기쁨을 주는 쿤자이트</span><br>
+                            <img src="../../static/연예인/윤아.jpg" class="jewerly_img"><h2>윤아</h2>
+                        {% elif log == 'ESTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/터키석.png" class="jewerly">책임감의 대명사 터키석</span><br>
+                            <img src="../../static/연예인/한채영.jpg" class="jewerly_img"><h2>한채영</h2>
+                        {% elif log == 'ESTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">자신감 넘치는 루벨라이트</span><br>
+                            <img src="../../static/연예인/이유비.jpg" class="jewerly_img"><h2>이유비</h2>
+                        {% elif log == 'INFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/가넷.png" class="jewerly">신뢰 가득한 가넷</span><br>
+                            <img src="../../static/연예인/태연.jpg" class="jewerly_img"><h2>태연</h2>
+                        {% elif log == 'INFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루비.png" class="jewerly">낭만적인 루비</span><br>
+                            <img src="../../static/연예인/아이유.jpg" class="jewerly_img"><h2>아이유</h2>
+                        {% elif log == 'INTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
+                            <img src="../../static/연예인/류진.jpg" class="jewerly_img"><h2>류진</h2>
+                        {% elif log == 'INTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
+                            <img src="../../static/연예인/정은지.jpg" class="jewerly_img"><h2>정은지</h2>
+                        {% elif log == 'ISFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">이해심 넘치는 투어멀린</span><br>
+                            <img src="../../static/연예인/예지.jpg" class="jewerly_img"><h2>예지</h2>
+                        {% elif log == 'ISFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">정이 많은 라피스라줄리</span><br>
+                            <img src="../../static/연예인/이미주.jpg" class="jewerly_img"><h2>이미주</h2>
+                        {% elif log == 'ISTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/자수정.png" class="jewerly">조용히 강렬한 자수정</span><br>
+                            <img src="../../static/연예인/효연.jpg" class="jewerly_img"><h2>효연</h2>
+                        {% elif log == 'ISTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">상대를 존중하는 아쿠아마린</span><br>
+                            <img src="../../static/연예인/김연아.jpg" class="jewerly_img"><h2>김연아</h2>
+                        {% endif %}
                     {% endif %}
                 {% endfor %}
-            <br> <a href="{% url 'articleapp:ytwo' pk=target.pk%}">데이트코스 보러가기</a>
+                {% endfor %}
+                <hr style="border:solid;"> <a style="font-size: 22px;" href="{% url 'articleapp:ytwo' pk=target.pk%}">데이트코스 보러가기</a>
         </div>
         <div class="ymti_recommend">
-            {% for sex in view.ymti_recommend_sex %}
+            {% for sex in target.mem_sex %}
+            {% for ymti in view.ymti_recommend %}
                     {% if sex == 'f' %}
-                        {% for ymti in view.ymti_recommend %}
-                            {% if ymti == 'ENFP' %}
-                                <h5> 낙천적인 토파즈</h5><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">
-                                <h4>유연석</h4>
-                            {% elif ymti == 'ENFJ' %}
-                                <h5>배려감 넘치는 크리스탈</h5><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">
-                                <h4>지민</h4>
-                            {% elif ymti == 'ENTJ' %}
-                                <h5>사랑을 쟁취하는 에메랄드</h5>
-                                <img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">
-                                <h4>곽동연</h4>
-                            {% elif ymti == 'ENTP' %}
-                                <h5> 생각이 톡톡 튀는 페리도트</h5>
-                                <img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">
-                                <h4>정혁</h4>
-                            {% elif ymti == 'ESFJ' %}
-                                <h5> 포용하는 사파이어 </h5>
-                                <img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">
-                                <h4> 박보검</h4>
-                            {% elif ymti == 'ESFP' %}
-                                <h5>기쁨을 주는 쿤자이트</h5>
-                                <img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">
-                                <h4>정재현</h4>
-                            {% elif ymti == 'ESTJ' %}
-                                <h5> 책임감의 대명사 터키석 </h5>
-                                <img src="../../static/ymti_jewerly/터키석.png" class="jewerly">
-                                <h4>김민규</h4>
-                            {% elif ymti == 'ESTP' %}
-                                <h5>자신감 넘치는 루벨라이트</h5>
-                                <img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">
-                                <h4>태현</h4>
-                            {% elif ymti == 'INFJ' %}
-                                <h5>신뢰 가득한 가넷</h5>
-                                <img src="../../static/ymti_jewerly/가넷.png" class="jewerly">
-                                <h4>남주혁</h4>
-                            {% elif ymti == 'INFP' %}
-                                <h5>낭만적인 루비</h5>
-                                <img src="../../static/ymti_jewerly/루비.png" class="jewerly">
-                                <h4>조승우</h4>
-                            {% elif ymti == 'INTJ' %}
-                                <h5> 능력있는 진주 </h5>
-                                <img src="../../static/ymti_jewerly/진주.png" class="jewerly">
-                                <h4>강동원</h4>
-                            {% elif ymti == 'INTP' %}
-                                <h5>품격있는 다이아몬드</h5>
-                                <img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">
-                                <h4>슈가</h4>
-                            {% elif ymti == 'ISFJ' %}
-                                <h5>이해심 넘치는 투어멀린</h5>
-                                <img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">
-                                <h4>정한</h4>
-                            {% elif ymti == 'ISFP' %}
-                                <h5> 정이 많은 라피스라줄리</h5>
-                                <img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">
-                                <h4>유재석</h4>
-                            {% elif ymti == 'ISTJ' %}
-                                <h5>조용히 강렬한 자수정</h5>
-                                <img src="../../static/ymti_jewerly/자수정.png" class="jewerly">
-                                <h4>차태현</h4>
-                            {% elif ymti == 'ISTP' %}
-                                <h5> 상대를 존중하는 아쿠아마린</h5>
-                                <img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">
-                                <h4>주우재</h4>
-                            {% endif %}
-                        {% endfor %}
-                    {% else %}
-                        {% for ymti in view.ymti_recommend %}
-                            {% if ymti == 'ENFP' %}
-                                <h5> 낙천적인 토파즈</h5>
-                                <img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">
-                                <h4>조보아</h4>
-                            {% elif ymti == 'ENFJ' %}
-                                <h5>배려감 넘치는 크리스탈</h5>
-                                <img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">
-                                <h4>예린</h4>
-                            {% elif ymti == 'ENTJ' %}
-                                <h5>사랑을 쟁취하는 에메랄드</h5>
-                                <img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">
-                                <h4>티파니</h4>
-                            {% elif ymti == 'ENTP' %}
-                                <h5> 생각이 톡톡 튀는 페리도트</h5>
-                                <img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">
-                                <h4>한예슬</h4>
-                            {% elif ymti == 'ESFJ' %}
-                                <h5> 포용하는 사파이어 </h5>
-                                <img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">
-                                <h4>효정</h4>
-                            {% elif ymti == 'ESFP' %}
-                                <h5>기쁨을 주는 쿤자이트</h5>
-                                <img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">
-                                <h4>윤아</h4>
-                            {% elif ymti == 'ESTJ' %}
-                                <h5> 책임감의 대명사 터키석 </h5>
-                                <img src="../../static/ymti_jewerly/터키석.png" class="jewerly">
-                                <h4>한채영</h4>
-                            {% elif ymti == 'ESTP' %}
-                                <h5>자신감 넘치는 루벨라이트</h5>
-                                <img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">
-                                <h4>이유비</h4>
-                            {% elif ymti == 'INFJ' %}
-                                <h5>신뢰 가득한 가넷</h5>
-                                <img src="../../static/ymti_jewerly/가넷.png" class="jewerly">
-                                <h4>태연</h4>
-                            {% elif ymti == 'INFP' %}
-                                <h5>낭만적인 루비</h5>
-                                <img src="../../static/ymti_jewerly/루비.png" class="jewerly">
-                                <h4>아이유</h4>
-                            {% elif ymti == 'INTJ' %}
-                                <h5> 능력있는 진주 </h5>
-                                <img src="../../static/ymti_jewerly/진주.png" class="jewerly">
-                                <h4>류진</h4>
-                            {% elif ymti == 'INTP' %}
-                                <h5>품격있는 다이아몬드</h5>
-                                <img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">
-                                <h4>정은지</h4>
-                            {% elif ymti == 'ISFJ' %}
-                                <h5>이해심 넘치는 투어멀린</h5>
-                                <img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">
-                                <h4>예지</h4>
-                            {% elif ymti == 'ISFP' %}
-                                <h5> 정이 많은 라피스라줄리</h5>
-                                <img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">
-                                <h4>이미주</h4>
-                            {% elif ymti == 'ISTJ' %}
-                                <h5>조용히 강렬한 자수정</h5>
-                                <img src="../../static/ymti_jewerly/자수정.png" class="jewerly">
-                                <h4>효연</h4>
-                            {% elif ymti == 'ISTP' %}
-                                <h5> 상대를 존중하는 아쿠아마린</h5>
-                                <img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">
-                                <h4>김연아</h4>
-                            {% endif %}
-                        {% endfor %}
+                        {% if ymti == 'ENFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">낙천적인 토파즈</span><br>
+                            <img src="../../static/연예인/유연석.jpg" class="jewerly_img"><h2>유연석</h2>
+                        {% elif ymti == 'ENFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">배려감 넘치는 크리스탈</span><br>
+                            <img src="../../static/연예인/지민.jpg" class="jewerly_img"><h2>지민</h2>
+                        {% elif ymti == 'ENTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">사랑을 쟁취하는 에메랄드</span><br>
+                            <img src="../../static/연예인/곽동연.jpg" class="jewerly_img"><h2>곽동연</h2>
+                        {% elif ymti == 'ENTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">생각이 톡톡 튀는 페리도트</span><br>
+                            <img src="../../static/연예인/정혁.jpg" class="jewerly_img"><h2>정혁</h2>
+                        {% elif ymti == 'ESFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">포용하는 사파이어</span><br>
+                            <img src="../../static/연예인/박보검.jpg" class="jewerly_img"><h2> 박보검</h2>
+                        {% elif ymti == 'ESFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">기쁨을 주는 쿤자이트</span><br>
+                            <img src="../../static/연예인/정재현.jpg" class="jewerly_img"><h2>정재현</h2>
+                        {% elif ymti == 'ESTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/터키석.png" class="jewerly">책임감의 대명사 터키석</span><br>
+                            <img src="../../static/연예인/김민규.jpg" class="jewerly_img"><h2>김민규</h2>
+                        {% elif ymti == 'ESTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">자신감 넘치는 루벨라이트</span><br>
+                            <img src="../../static/연예인/태현.jpg" class="jewerly_img"><h2>태현</h2>
+                        {% elif ymti == 'INFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/가넷.png" class="jewerly">신뢰 가득한 가넷</span><br>
+                            <img src="../../static/연예인/남주혁.jpg" class="jewerly_img"><h2>남주혁</h2>
+                        {% elif ymti == 'INFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루비.png" class="jewerly">낭만적인 루비</span><br>
+                            <img src="../../static/연예인/조승우.jpg" class="jewerly_img"><h2>조승우</h2>
+                        {% elif ymti == 'INTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
+                            <img src="../../static/연예인/강동원.png" class="jewerly_img"><h2>강동원</h2>
+                        {% elif ymti == 'INTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
+                            <img src="../../static/연예인/슈가.jpg" class="jewerly_img"><h2>슈가</h2>
+                        {% elif ymti == 'ISFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">이해심 넘치는 투어멀린</span><br>
+                            <img src="../../static/연예인/정한.jpg" class="jewerly_img"><h2>정한</h2>
+                        {% elif ymti == 'ISFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">정이 많은 라피스라줄리</span><br>
+                            <img src="../../static/연예인/유재석.jpg" class="jewerly_img"><h2>유재석</h2>
+                        {% elif ymti == 'ISTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/자수정.png" class="jewerly">조용히 강렬한 자수정</span><br>
+                            <img src="../../static/연예인/차태현.jpg" class="jewerly_img"><h2>차태현</h2>
+                        {% elif ymti == 'ISTP' %}
+                             <span class="jewerly_ment"><img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">상대를 존중하는 아쿠아마린</span><br>
+                            <img src="../../static/연예인/주우재.jpg" class="jewerly_img"><h2>주우재</h2>
+                        {% endif %}
+                    {% elif sex == 'm' %}
+                        {% if ymti == 'ENFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/토파즈.png" class="jewerly">낙천적인 토파즈</span><br>
+                            <img src="../../static/연예인/조보아.png" class="jewerly_img"><h2>조보아</h2>
+                        {% elif ymti == 'ENFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/크리스탈.png" class="jewerly">배려감 넘치는 크리스탈</span><br>
+                            <img src="../../static/연예인/예린.jpg" class="jewerly_img"><h2>예린</h2>
+                        {% elif ymti == 'ENTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/에메랄드.png" class="jewerly">사랑을 쟁취하는 에메랄드</span><br>
+                            <img src="../../static/연예인/티파니.jpg" class="jewerly_img"><h2>티파니</h2>
+                        {% elif ymti == 'ENTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/페리도트.png" class="jewerly">생각이 톡톡 튀는 페리도트</span><br>
+                            <img src="../../static/연예인/한예슬.jpg" class="jewerly_img"><h2>한예슬</h2>
+                        {% elif ymti == 'ESFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/사파이어.png" class="jewerly">포용하는 사파이어</span><br>
+                            <img src="../../static/연예인/효정.jpg" class="jewerly_img"><h2>효정</h2>
+                        {% elif ymti == 'ESFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/쿤자이트.png" class="jewerly">기쁨을 주는 쿤자이트</span><br>
+                            <img src="../../static/연예인/윤아.jpg" class="jewerly_img"><h2>윤아</h2>
+                        {% elif ymti == 'ESTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/터키석.png" class="jewerly">책임감의 대명사 터키석</span><br>
+                            <img src="../../static/연예인/한채영.jpg" class="jewerly_img"><h2>한채영</h2>
+                        {% elif ymti == 'ESTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루벨라이트.png" class="jewerly">자신감 넘치는 루벨라이트</span><br>
+                            <img src="../../static/연예인/이유비.jpg" class="jewerly_img"><h2>이유비</h2>
+                        {% elif ymti == 'INFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/가넷.png" class="jewerly">신뢰 가득한 가넷</span><br>
+                            <img src="../../static/연예인/태연.jpg" class="jewerly_img"><h2>태연</h2>
+                        {% elif ymti == 'INFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/루비.png" class="jewerly">낭만적인 루비</span><br>
+                            <img src="../../static/연예인/아이유.jpg" class="jewerly_img"><h2>아이유</h2>
+                        {% elif ymti == 'INTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/진주.png" class="jewerly">능력있는 진주</span><br>
+                            <img src="../../static/연예인/류진.jpg" class="jewerly_img"><h2>류진</h2>
+                        {% elif ymti == 'INTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/다이아몬드.png" class="jewerly">품격있는 다이아몬드</span><br>
+                            <img src="../../static/연예인/정은지.jpg" class="jewerly_img"><h2>정은지</h2>
+                        {% elif ymti == 'ISFJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/투어멀린.png" class="jewerly">이해심 넘치는 투어멀린</span><br>
+                            <img src="../../static/연예인/예지.jpg" class="jewerly_img"><h2>예지</h2>
+                        {% elif ymti == 'ISFP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/라피스라줄리.png" class="jewerly">정이 많은 라피스라줄리</span><br>
+                            <img src="../../static/연예인/이미주.jpg" class="jewerly_img"><h2>이미주</h2>
+                        {% elif ymti == 'ISTJ' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/자수정.png" class="jewerly">조용히 강렬한 자수정</span><br>
+                            <img src="../../static/연예인/효연.jpg" class="jewerly_img"><h2>효연</h2>
+                        {% elif ymti == 'ISTP' %}
+                            <span class="jewerly_ment"><img src="../../static/ymti_jewerly/아쿠아마린.png" class="jewerly">상대를 존중하는 아쿠아마린</span><br>
+                            <img src="../../static/연예인/김연아.jpg" class="jewerly_img"><h2>김연아</h2>
+                        {% endif %}
                     {% endif %}
                 {% endfor %}
-            <br> <a href="{% url 'articleapp:ythree' pk=target.pk%}">데이트코스 보러가기</a>
+                {% endfor %}
+            <hr style="border:solid;"> <a style="font-size: 22px;" href="{% url 'articleapp:ythree' pk=target.pk%}">데이트코스 보러가기</a>
         </div>
 
         {% else %}

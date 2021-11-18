@@ -217,7 +217,7 @@ def find_ymti(mem_id,top_n):
             c = b[b['mbti_code']=="INTP"].sample(frac=1)
             return(c[:top_n])
     
-mem_id =30302
+mem_id =153136
 
 # # sim_food = find_food_cat(df_2030, food_sim_sorted_ind, mem_id )
 # print("=="*60)
