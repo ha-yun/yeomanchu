@@ -69,6 +69,14 @@ class YONE(DetailView):
         for i in yone_place_date:
             yone_place_list.append(i)
         return yone_place_list[1]
+    def yone_place_date_column(self):
+        user = self.request.user
+        mem_id = user.mem_no
+        yone_place_date = first_dating_course(mem_id, 1)
+        yone_place_list = []
+        for i in yone_place_date:
+            yone_place_list.append(i)
+        return yone_place_list[2]
 
     def yone_food_date(self):
         user = self.request.user
@@ -86,6 +94,14 @@ class YONE(DetailView):
         for i in yone_food_date:
             yone_food_list.append(i)
         return yone_food_list[1]
+    def yone_food_date_column(self):
+        user = self.request.user
+        mem_id = user.mem_no
+        yone_food_date = first_food_course(mem_id,1)
+        yone_food_list = []
+        for i in yone_food_date:
+            yone_food_list.append(i)
+        return yone_food_list[-1]
 
 
 
@@ -111,6 +127,14 @@ class YTWO(DetailView):
         for i in ytwo_place_date:
             ytwo_place_list.append(i)
         return ytwo_place_list[1]
+    def ytwo_place_date_column(self):
+        user = self.request.user
+        mem_id = user.mem_no
+        ytwo_place_date = second_dating_course(mem_id,1)
+        ytwo_place_list = []
+        for i in ytwo_place_date:
+            ytwo_place_list.append(i)
+        return ytwo_place_list[2]
 
     def ytwo_food_date(self):
         user = self.request.user
@@ -128,6 +152,14 @@ class YTWO(DetailView):
         for i in ytwo_food_date:
             ytwo_food_list.append(i)
         return ytwo_food_list[1]
+    def ytwo_food_date_column(self):
+        user = self.request.user
+        mem_id = user.mem_no
+        ytwo_food_date = second_food_course(mem_id,1)
+        ytwo_food_list = []
+        for i in ytwo_food_date:
+            ytwo_food_list.append(i)
+        return ytwo_food_list[-1]
 
 
 
@@ -153,6 +185,14 @@ class YTHREE(DetailView):
         for i in ythree_place_date:
             ythree_place_list.append(i)
         return ythree_place_list[1]
+    def ythree_place_date_column(self):
+        user = self.request.user
+        mem_id = user.mem_no
+        ythree_place_date = third_dating_course(mem_id,1)
+        ythree_place_list = []
+        for i in ythree_place_date:
+            ythree_place_list.append(i)
+        return ythree_place_list[2]
 
     def ythree_food_date(self):
         user = self.request.user
@@ -170,6 +210,14 @@ class YTHREE(DetailView):
         for i in ythree_food_date:
             ythree_food_list.append(i)
         return ythree_food_list[1]
+    def ythree_food_date_column(self):
+        user = self.request.user
+        mem_id = user.mem_no
+        ythree_food_date = third_food_course(mem_id,1)
+        ythree_food_list = []
+        for i in ythree_food_date:
+            ythree_food_list.append(i)
+        return ythree_food_list[-1]
 
 
 

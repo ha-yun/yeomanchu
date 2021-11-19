@@ -40,87 +40,87 @@ df_etc = pd.DataFrame(columns=['etc','url'],data=etc)                       # �
 ## 1. 첫 번째 사람에 대한 장소,음식점 추천(음식 기반 사람 추천)========================================================================================
 def first_dating_course(mem_id,top_n):
     if (find_food_person(mem_id,top_n).mem_sex.values=="f") & (find_food_person(mem_id,top_n).mbti_code.values[0][0]=="E"):
-        return 'outside' ,df_outside['outside'][0], df_outside['url'][0]
+        return df_outside['outside'][0], df_outside['url'][0], 'outside'
     elif (find_food_person(mem_id,top_n).mem_sex.values=="f") & (find_food_person(mem_id,top_n).mbti_code.values[0][0]=="I"):
-        return 'outside' ,df_inside['inside'][0],df_inside['url'][0]
+        return df_inside['inside'][0],df_inside['url'][0], 'inside'
     elif (df_2030[df_2030['mem_no']==mem_id].mem_sex.values=="f") & (df_2030[df_2030['mem_no']==mem_id].mbti_code.values[0][0]=="E"):
-        return 'outside' ,df_outside['outside'][0],df_outside['url'][0]
+        return df_outside['outside'][0],df_outside['url'][0], 'outside'
     elif (df_2030[df_2030['mem_no']==mem_id].mem_sex.values=="f") & (df_2030[df_2030['mem_no']==mem_id].mbti_code.values[0][0]=="I"):
-        return 'outside' ,df_inside['inside'][0],df_inside['url'][0]
+        return df_inside['inside'][0],df_inside['url'][0], 'inside'
 #'western', 'chinese', 'japanese', 'korean','dessert', 'etc'
 def first_food_course(mem_id,top_n):
     if find_food_person(mem_id,top_n).food_cat.values[0].split()[0] =="western":
-        return df_western['western'][0], df_western['url'][0]                                             
+        return df_western['western'][0], df_western['url'][0], 'western'
     elif find_food_person(mem_id,top_n).food_cat.values[0].split()[0] =="chinese":
-        return df_chinese['chinese'][0], df_chinese['url'][0]
+        return df_chinese['chinese'][0], df_chinese['url'][0], 'chinese'
     elif find_food_person(mem_id,top_n).food_cat.values[0].split()[0] =="japanese":
-        return df_japanese['japanese'][0], df_japanese['url'][0]
+        return df_japanese['japanese'][0], df_japanese['url'][0], 'japanese'
     elif find_food_person(mem_id,top_n).food_cat.values[0].split()[0] =="korean":
-        return df_korean['korean'][0], df_korean['url'][0]
+        return df_korean['korean'][0], df_korean['url'][0], 'korean'
     elif find_food_person(mem_id,top_n).food_cat.values[0].split()[0] =="dessert":
-        return df_dessert['dessert'][0], df_dessert['url'][0]
+        return df_dessert['dessert'][0], df_dessert['url'][0], 'dessert'
     else:
-        return df_etc['etc'][0]
+        return df_etc['etc'][0], 'etc'
 
 ## 2. 두 번째 사람에 대한 장소, 음식점 추천(로그 기반 사람 추천)========================================================================================
 def second_dating_course(mem_id,top_n):
     if (find_log(mem_id,top_n).mem_sex.values=="f") & (find_log(mem_id,top_n).mbti_code.values[0][0]=="E"):
-        return df_outside['outside'][1], df_outside['url'][1]
+        return df_outside['outside'][1], df_outside['url'][1], 'outside'
     elif (find_log(mem_id,top_n).mem_sex.values=="f") & (find_log(mem_id,top_n).mbti_code.values[0][0]=="I"):
-        return df_inside['inside'][1],df_inside['url'][1]
+        return df_inside['inside'][1],df_inside['url'][1], 'inside'
     elif (df_2030[df_2030['mem_no']==mem_id].mem_sex.values=="f") & (df_2030[df_2030['mem_no']==mem_id].mbti_code.values[0][0]=="E"):
-        return df_outside['outside'][1],df_outside['url'][1]
+        return df_outside['outside'][1],df_outside['url'][1], 'outside'
     elif (df_2030[df_2030['mem_no']==mem_id].mem_sex.values=="f") & (df_2030[df_2030['mem_no']==mem_id].mbti_code.values[0][0]=="I"):
-        return df_inside['inside'][1],df_inside['url'][1]
+        return df_inside['inside'][1],df_inside['url'][1], 'inside'
 def second_food_course(mem_id,top_n):
     me = df_2030[df_2030['mem_no']==mem_id].food_cat.values[0].split()
     person = find_log(mem_id,top_n).food_cat.values[0].split()
     a = list(set(me).intersection(person))
     random.shuffle(a)
     if a[0] =="western":
-        return df_western['western'][1], df_western['url'][1]                                             
+        return df_western['western'][1], df_western['url'][1], 'western'
     elif a[0] =="chinese":
-        return df_chinese['chinese'][1], df_chinese['url'][1]
+        return df_chinese['chinese'][1], df_chinese['url'][1], 'chinese'
     elif a[0] =="japanese":
-        return df_japanese['japanese'][1], df_japanese['url'][1]
+        return df_japanese['japanese'][1], df_japanese['url'][1], 'japanese'
     elif a[0] =="korean":
-        return df_korean['korean'][1], df_korean['url'][1]
+        return df_korean['korean'][1], df_korean['url'][1], 'korean'
     elif a[0] =="dessert":
-        return df_dessert['dessert'][1], df_dessert['url'][1]
+        return df_dessert['dessert'][1], df_dessert['url'][1], 'dessert'
     elif a[0] =="etc":
-        return df_etc['etc'][1]
+        return df_etc['etc'][1], 'etc'
     elif len(a) == 0:
-        return df_western['western'][1], df_western['url'][1]      
+        return df_western['western'][1], df_western['url'][1], 'western'
 
 ## 3. 세 번째 사람에 대한 장소, 음식점 추천(YMTI 기반 사람 추천)========================================================================================
 def third_dating_course(mem_id,top_n):
     if (find_ymti(mem_id,top_n).mem_sex.values=="f") & (find_ymti(mem_id,top_n).mbti_code.values[0][0]=="E"):
-            return df_outside['outside'][2], df_outside['url'][2]
+            return df_outside['outside'][2], df_outside['url'][2], 'outside'
     elif (find_ymti(mem_id,top_n).mem_sex.values=="f") & (find_ymti(mem_id,top_n).mbti_code.values[0][0]=="I"):
-        return df_inside['inside'][2],df_inside['url'][2]
+        return df_inside['inside'][2],df_inside['url'][2], 'inside'
     elif (df_2030[df_2030['mem_no']==mem_id].mem_sex.values=="f") & (df_2030[df_2030['mem_no']==mem_id].mbti_code.values[0][0]=="E"):
-        return df_outside['outside'][2],df_outside['url'][2]
+        return df_outside['outside'][2],df_outside['url'][2], 'outside'
     elif (df_2030[df_2030['mem_no']==mem_id].mem_sex.values=="f") & (df_2030[df_2030['mem_no']==mem_id].mbti_code.values[0][0]=="I"):
-        return df_inside['inside'][2],df_inside['url'][2]
+        return df_inside['inside'][2],df_inside['url'][2], 'inside'
 def third_food_course(mem_id,top_n):
     me = df_2030[df_2030['mem_no']==mem_id].food_cat.values[0].split()
     person = find_ymti(mem_id,top_n).food_cat.values[0].split()
     a = list(set(me).intersection(person))
     random.shuffle(a)
     if a[0] =="western":
-        return df_western['western'][2], df_western['url'][2]                                             
+        return df_western['western'][2], df_western['url'][2], 'western'
     elif a[0] =="chinese":
-        return df_chinese['chinese'][2], df_chinese['url'][2]
+        return df_chinese['chinese'][2], df_chinese['url'][2], 'chinese'
     elif a[0] =="japanese":
-        return df_japanese['japanese'][2], df_japanese['url'][2]
+        return df_japanese['japanese'][2], df_japanese['url'][2], 'japanese'
     elif a[0] =="korean":
-        return df_korean['korean'][2], df_korean['url'][2]
+        return df_korean['korean'][2], df_korean['url'][2], 'korean'
     elif a[0] =="dessert":
-        return df_dessert['dessert'][2], df_dessert['url'][2]
+        return df_dessert['dessert'][2], df_dessert['url'][2], 'dessert'
     elif a[0] =="etc":
-        return df_etc['etc'][2]
+        return df_etc['etc'][2], 'etc'
     elif len(a) == 0:
-        return df_western['western'][2], df_western['url'][2]    
+        return df_western['western'][2], df_western['url'][2], 'western'
 
 
 
@@ -128,7 +128,7 @@ def third_food_course(mem_id,top_n):
 #
 # print("=="*62)
 # print(" ★ 첫 번째 사람의 데이트 코스 추천 ★ ")
-print("데이트 장소 : ",first_dating_course(mem_id,1))
+# print("데이트 장소 : ",first_dating_course(mem_id,1))
 # print("음식점 : ", first_food_course(mem_id,1))
 # print("=="*62)
 # print(" ★ 두 번째 사람의 데이트 코스 추천 ★ ")

@@ -8,17 +8,18 @@
         <div>
             {% include 'star.html' %}
             <form action="{% url 'accountapp:create' %}" method="post" class="createForm">{% csrf_token %}
-                <h2>회원 가입</h2>
+                <span style="font-size: 35px">회원 가입</span>
                 {% for field in form %}
             <div class="idForm">
                 <label form="{{ field.id_for_label }}">{{ field.label }}</label>
                 <input type="{{ field.field.widget.input_type }}" class="id"
                    id="{{ field.id_for_label }}" placeholder="{{ field.label }}" name="{{ field.name }}"/>
             </div>
-                        {% if field.errors %}
-                        <span style="color: red">필수 항목입니다</span>
-                        {% endif %}
-                    {% endfor %}
+            {% endfor %}
+                {% if form.errors %}
+                <span style="color: red; font-size: 1rem;font-weight: bold">필수 항목입니다</span>
+                {% endif %}
+
                     <button type="submit" class="btn rounded-pill" onclick="button()">Create</button>
             </form>
 

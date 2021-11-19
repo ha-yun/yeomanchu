@@ -3,14 +3,39 @@
 {% block content %}
 {% if user.is_authenticated %}
     {% if user == target_ytwo %}
-        <div>
-
-            <div class="place_date">
+        <div class="place_date">
             <h5 style="font-weight: bold;"> ♡ 함께하기 딱 좋은 이색 데이트 ♡ </h5>
-                {{ view.ytwo_place_date }}
+                {% if view.ytwo_place_date_column == 'inside' %}
+                        <img src="../../static/데이트코스/실내2.png" class="place_dateimg">
+                    {% elif view.ytwo_place_date_column == 'outside' %}
+                        <img src="../../static/데이트코스/야외.jpg" class="place_dateimg">
+                    {% endif %}
+                <h4>{{ view.ytwo_place_date }}</h4>
                 <span>
                     <a href="{{ view.ytwo_place_date_link }}" target="_blank">link</a>
                 </span>
+        </div>
+        <div class="food_date">
+            <h5 style="font-weight: bold;"> ♡ 취향 맞춤 식당 ♡ </h5>
+                    {% if view.ytwo_food_date_column == 'western' %}
+                        <img src="../../static/데이트코스/양식2.jpg" class="place_dateimg">
+                    {% elif view.ytwo_food_date_column == 'chinese' %}
+                        <img src="../../static/데이트코스/중식.jpg" class="place_dateimg">
+                    {% elif view.ytwo_food_date_column == 'japanese' %}
+                        <img src="../../static/데이트코스/일식.jpg" class="place_dateimg">
+                    {% elif view.ytwo_food_date_column == 'korean' %}
+                        <img src="../../static/데이트코스/한식.png" class="place_dateimg">
+                    {% elif view.ytwo_food_date_column == 'dessert' %}
+                        <img src="../../static/데이트코스/디저트.png" class="place_dateimg">
+                    {% elif view.ytwo_food_date_column == 'etc' %}
+                        <img src="../../static/데이트코스/한식4.jpg" class="place_dateimg">
+                    {% endif %}
+                <h4>{{ view.ytwo_food_date }}</h4>
+                <span>
+                    <a href="{{ view.ytwo_food_date_link }}" target="_blank">link</a>
+                </span>
+        </div>
+        <div style="text-align: center;margin-top: 32rem;">
                 <p>
                     <a id="btnTwitter" href="javascript:shareTwitter();">
                         <img src="/static/share_img/twitter_img.png" width=36 alt="Twitter">
@@ -21,57 +46,39 @@
                     <a id="btnKakao" href="javascript:shareKakao();">
                         <img src="/static/share_img/kakao_img.jpg" width=36 alt="Kakaotalk">
                     </a>
+                            <script>
+                            function shareTwitter() {
+                                var sendText = "여만추"; // 전달할 텍스트
+                                var sendUrl = "http://127.0.0.1:1021/articles/list/"; // 전달할 URL
+                                window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
+                                    }
+                            function shareFacebook() {
+                                var sendUrl = "http://127.0.0.1:1021/articles/list/"; // 전달할 URL
+                                window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+                                    }
+                            function shareKakao() {
+                              // 사용할 앱의 JavaScript 키 설정
+                              Kakao.init('6119304fc2852939a02d1c268ece820f');
+                              // 카카오링크 버튼 생성
+                              Kakao.Link.createDefaultButton({
+                                container: '#btnKakao', // 카카오공유버튼ID
+                                objectType: 'feed',
+                                content: {
+                                  title: "여만추", // 보여질 제목
+                                  description: "당신을 위한", // 보여질 설명
+                                  imageUrl: "https://cdn.pixabay.com/photo/2015/10/16/19/18/balloon-991680_960_720.jpg", // 콘텐츠 URL
+                                  link: {
+                                     webUrl: "http://127.0.0.1:1021/"
+                                  }
+                                }
+                              });
+                                }
+                            </script>
                 </p>
-            </div>
-            <div class="food_date">
-            <h5 style="font-weight: bold;"> ♡ 취향 맞춤 식당 ♡ </h5>
-                {{ view.ytwo_food_date }}
-                <span>
-                    <a href="{{ view.ytwo_food_date_link }}" target="_blank">link</a>
-                </span>
+        </div>
 
-            <p>
-                <a id="btnTwitter" href="javascript:shareTwitter();">
-                    <img src="/static/share_img/twitter_img.png" width=36 alt="Twitter">
-                </a>
-                <a id="btnFacebook" href="javascript:shareFacebook();">
-                    <img src="/static/share_img/facebook_img.png" width=36 alt="Facebook">
-                </a>
-                <a id="btnKakao" href="javascript:shareKakao();">
-                    <img src="/static/share_img/kakao_img.jpg" width=36 alt="Kakaotalk">
-                </a>
-            </p>
-
-                <script>
-                function shareTwitter() {
-                    var sendText = "여만추"; // 전달할 텍스트
-                    var sendUrl = "http://127.0.0.1:1021/articles/list/"; // 전달할 URL
-                    window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
-                        }
-                function shareFacebook() {
-                    var sendUrl = "http://127.0.0.1:1021/articles/list/"; // 전달할 URL
-                    window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
-                        }
-                function shareKakao() {
-                  // 사용할 앱의 JavaScript 키 설정
-                  Kakao.init('6119304fc2852939a02d1c268ece820f');
-                  // 카카오링크 버튼 생성
-                  Kakao.Link.createDefaultButton({
-                    container: '#btnKakao', // 카카오공유버튼ID
-                    objectType: 'feed',
-                    content: {
-                      title: "여만추", // 보여질 제목
-                      description: "당신을 위한", // 보여질 설명
-                      imageUrl: "https://cdn.pixabay.com/photo/2015/10/16/19/18/balloon-991680_960_720.jpg", // 콘텐츠 URL
-                      link: {
-                         webUrl: "http://127.0.0.1:1021/"
-                      }
-                    }
-                  });
-                    }
-                </script>
     {% else%}
     {% endif %}
-        </div>
+
 {% endif %}
 {% endblock %}
