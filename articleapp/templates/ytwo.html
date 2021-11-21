@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-
 {% block content %}
+    {% include 'star.html' %}
 {% if user.is_authenticated %}
     {% if user == target_ytwo %}
         <div class="place_date">
@@ -11,9 +11,7 @@
                         <img src="../../static/데이트코스/야외.jpg" class="place_dateimg">
                     {% endif %}
                 <h4>{{ view.ytwo_place_date }}</h4>
-                <span>
-                    <a href="{{ view.ytwo_place_date_link }}" target="_blank">link</a>
-                </span>
+                <a href="{{ view.ytwo_place_date_link }}" target="_blank"><span class="card_date">LINK</span></a>
         </div>
         <div class="food_date">
             <h5 style="font-weight: bold;"> ♡ 취향 맞춤 식당 ♡ </h5>
@@ -31,9 +29,7 @@
                         <img src="../../static/데이트코스/한식4.jpg" class="place_dateimg">
                     {% endif %}
                 <h4>{{ view.ytwo_food_date }}</h4>
-                <span>
-                    <a href="{{ view.ytwo_food_date_link }}" target="_blank">link</a>
-                </span>
+                <a href="{{ view.ytwo_food_date_link }}" target="_blank"><span class="card_date">LINK</span></a>
         </div>
         <div style="text-align: center;margin-top: 32rem;">
                 <p>

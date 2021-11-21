@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<body>
-{% include 'cutyfire.html' %}
-{#{% include 'firetest.html' %}#}
 
+<body>
+{#{% include 'cutyfire.html' %}#}
+{% include 'firetest.html' %}
     {% if user.is_authenticated %}
         {% if user == target %}
         <div class="food_recommend">

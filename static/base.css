@@ -261,6 +261,23 @@ a:hover{
     box-shadow: 0 2px 25px rgba(137, 99, 226, 0.5);
     transition: transform ease-in 0.1s
 }
+.card_date{
+    /*width: 200px;*/
+    /*height: 40px;*/
+    border-radius: 28px;
+    background-color: rgba(41, 35, 79, 0.6);
+    padding:8px;
+    font-size:20px;
+    color: rgba(248, 248, 255, 0.8);
+    text-align: center;
+    box-shadow: 0 2px 25px rgba(137, 99, 226, 0.5);
+    transition: transform ease-in 0.1s
+}
+.card_date:hover{
+    color: rgba(229, 201, 21, 0.84);
+    transition: color 1s;
+    transform: scale(0.9);
+}
 .card:focus{
     outline: 0;
 }
